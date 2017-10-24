@@ -4,19 +4,69 @@ html {
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
-
+/*-----Generilized styles ------*/
 * {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
-
 body {
 	font-size: 16px;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 300; /*also loaded 600 for bold*/
+    font-family: $openSans;
+	font-weight: $normal; /*300 for normal, 600 for bold*/
 }
-h1 {
-	color: red;	
-		
+
+/*
+    CONTENT
+    1. self-generalized styles
+    2. Header
+    00. Miscellaneous
+*/
+
+
+/*-----------------------------------------------------
+---------    1. self generalized styles     -----------
+-----------------------------------------------------*/
+.row {
+    margin: 0 $gutter;
 }
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*-----------------------------------------------------
+-----------------   2. HEADER     ---------------------
+-----------------------------------------------------*/
+.header-wrapper {
+    position: fixed;    
+    background-color: #000;
+    width: 100%;
+}
+header {
+    padding: 1px;
+    color: #fff;
+    .logo {
+        width: 5em;
+        text-align: center;        
+        margin: 10px auto;        
+        font-size: 1.2em;
+        padding: 5.5px 10px;
+        border: 1px solid #fff;
+        h1 {
+            display: none;
+        }
+    }
+}
+
+@import "mobilemenu/mobilemenu";
+
+
+
+
+
+/*-----------------------------------------------------
+-----------------    00 Miscellaneous    -----------------------
+-------------------------------------------------------*/

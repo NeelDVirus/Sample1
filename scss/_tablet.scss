@@ -1,7 +1,39 @@
-@media only screen and (min-width: 768px) {
+//48em = 768px
+@media only screen and (min-width: 48em) {
 
-	h1 {
-	color: green;
-}
+/**********************************
+    CONTENT
+    1. Header And Navigation
+    2. 
+************************************/
+
+/*-----------------------------------------------------
+---------    Header And Navigation    -----------------
+-----------------------------------------------------*/
+    .nav-wrapper {position: relative;}
+	.nav-main {
+        ul {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 0%;
+            transform: translateY(-50%);
+            
+            li {
+                display: inline-block;
+                a {
+                    display: inline-block;
+                    color: #fff;
+                    text-decoration: none;
+                    text-transform: capitalize;
+                    padding: .3em;
+                }
+            }
+        }
+        .nav-button {
+            display: none;
+        }   
+    }
+
 
 } /* -----end of media querry--- */

@@ -70,7 +70,8 @@ figure {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -307,7 +308,8 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -345,7 +347,8 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -432,6 +435,18 @@ template {
   display: none;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: inline-block;
+}
+
+/****************************
+ HIGH PPI DISPLAY BACKGROUNDS
+*****************************/
 /*-----Prevents iPhone from resizing in landscape mode ------*/
 html {
   -ms-text-size-adjust: 100%;
@@ -439,34 +454,296 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+/*-----Generilized styles ------*/
 * {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 body {
   font-size: 16px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 300;
-  /*also loaded 600 for bold*/
+  /*300 for normal, 600 for bold*/
 }
 
-h1 {
-  color: red;
+/*
+    CONTENT
+    1. self-generalized styles
+    2. Header
+    00. Miscellaneous
+*/
+/*-----------------------------------------------------
+---------    1. self generalized styles     -----------
+-----------------------------------------------------*/
+.row {
+  margin: 0 2%;
 }
 
-@media only screen and (min-width: 768px) {
-  h1 {
-    color: green;
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*-----------------------------------------------------
+-----------------   2. HEADER     ---------------------
+-----------------------------------------------------*/
+.header-wrapper {
+  position: fixed;
+  background-color: #000;
+  width: 100%;
+}
+
+header {
+  padding: 1px;
+  color: #fff;
+}
+header .logo {
+  width: 5em;
+  text-align: center;
+  margin: 10px auto;
+  font-size: 1.2em;
+  padding: 5.5px 10px;
+  border: 1px solid #fff;
+}
+header .logo h1 {
+  display: none;
+}
+
+/*This partial-scss file is being imported in _phone-default*/
+.header-wrapper button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+}
+
+.nav-main li {
+  list-style: none;
+}
+.nav-main li a {
+  text-decoration: none;
+}
+.nav-main li.heading {
+  text-align: center;
+}
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition-property: opacity, -webkit-filter;
+  transition-property: opacity, -webkit-filter;
+  transition-property: opacity, filter;
+  transition-property: opacity, filter, -webkit-filter;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: black;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+.hamburger:hover {
+  opacity: 1;
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 22px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #f00;
+  border-radius: 4px;
+  position: absolute;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block;
+}
+.hamburger-inner::before {
+  top: -9px;
+}
+.hamburger-inner::after {
+  bottom: -9px;
+}
+
+/*
+ * Squeeze
+ */
+.hamburger--squeeze .hamburger-inner {
+  -webkit-transition-duration: 0.075s;
+          transition-duration: 0.075s;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--squeeze .hamburger-inner::before {
+  -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+  transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+}
+.hamburger--squeeze .hamburger-inner::after {
+  -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--squeeze.is-active .hamburger-inner {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition-delay: 0.12s;
+          transition-delay: 0.12s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--squeeze.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+  transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+}
+.hamburger--squeeze.is-active .hamburger-inner::after {
+  bottom: 0;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: bottom 0.075s ease, -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.075s ease, -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* General styles for all menus */
+.cbp-spmenu {
+  background: #47a3da;
+  position: fixed;
+}
+
+.cbp-spmenu .heading {
+  color: #afdefa;
+  font-size: 1.9em;
+  padding: 20px;
+  margin: 0;
+  font-weight: 300;
+  background: #0d77b6;
+}
+
+.cbp-spmenu a {
+  display: block;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+.cbp-spmenu a:hover {
+  background: #258ecd;
+}
+
+.cbp-spmenu a:active {
+  background: #afdefa;
+  color: #47a3da;
+}
+
+/* Orientation-dependent styles for the content of the menu */
+.cbp-spmenu-vertical {
+  width: 240px;
+  height: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.cbp-spmenu-vertical a {
+  border-bottom: 1px solid #258ecd;
+  padding: 1em;
+}
+
+/* Vertical menu that slides from the left or right */
+.cbp-spmenu-left {
+  left: -240px;
+}
+
+.cbp-spmenu-left.cbp-spmenu-open {
+  left: 0px;
+}
+
+/* Transitions */
+.cbp-spmenu {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/*-----------------------------------------------------
+-----------------    00 Miscellaneous    -----------------------
+-------------------------------------------------------*/
+@media only screen and (min-width: 48em) {
+  /**********************************
+      CONTENT
+      1. Header And Navigation
+      2. 
+  ************************************/
+  /*-----------------------------------------------------
+  ---------    Header And Navigation    -----------------
+  -----------------------------------------------------*/
+  .nav-wrapper {
+    position: relative;
+  }
+
+  .nav-main ul {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .nav-main ul li {
+    display: inline-block;
+  }
+  .nav-main ul li a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: .3em;
+  }
+  .nav-main .nav-button {
+    display: none;
   }
 }
 /* -----end of media querry--- */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 62em) {
   h1 {
     color: silver;
   }
 }
 /* ------ end of media query ------ */
-
+/*@import "mobilemenu";*/
 /*# sourceMappingURL=styles.css.map */

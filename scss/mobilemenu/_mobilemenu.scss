@@ -1,0 +1,25 @@
+/*This partial-scss file is being imported in _phone-default*/
+
+.header-wrapper {
+    button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1001;
+    }
+}
+.nav-main {
+    li {
+        list-style: none;
+    }
+    li a {
+        text-decoration: none;
+    }
+    li.heading {
+        text-align: center;
+    }
+}
+
+// Hamburger icon for open and close menu
+@import "hamburgers/hamburgers";
+@import "sidemenu-offCanvas/sidemenu";
