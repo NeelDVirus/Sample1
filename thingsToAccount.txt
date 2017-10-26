@@ -1,0 +1,5 @@
+1. I'm using em for media queries. em depends on browers default size but some(literally many) browsers have different size. how to account for consistency.
+
+2. using em in media queries have some quirks regarding using both min-width and max width in the some code block. check this out https://engageinteractive.co.uk/blog/em-vs-rem-vs-px
+
+3.

@@ -444,9 +444,6 @@ a {
   display: inline-block;
 }
 
-/****************************
- HIGH PPI DISPLAY BACKGROUNDS
-*****************************/
 /*-----Prevents iPhone from resizing in landscape mode ------*/
 html {
   -ms-text-size-adjust: 100%;
@@ -510,23 +507,22 @@ header .logo {
 header .logo h1 {
   display: none;
 }
+header .nav-main li {
+  list-style: none;
+}
+header .nav-main li a {
+  text-decoration: none;
+}
+header .nav-main li.heading {
+  text-align: center;
+}
 
 /*This partial-scss file is being imported in _phone-default*/
-.header-wrapper button {
+.nav-button {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1001;
-}
-
-.nav-main li {
-  list-style: none;
-}
-.nav-main li a {
-  text-decoration: none;
-}
-.nav-main li.heading {
-  text-align: center;
 }
 
 /*!
@@ -575,7 +571,7 @@ header .logo h1 {
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
   width: 40px;
   height: 4px;
-  background-color: #f00;
+  background-color: #fff;
   border-radius: 4px;
   position: absolute;
   -webkit-transition-property: -webkit-transform;
@@ -734,9 +730,6 @@ header .logo h1 {
     text-transform: capitalize;
     padding: .3em;
   }
-  .nav-main .nav-button {
-    display: none;
-  }
 }
 /* -----end of media querry--- */
 @media only screen and (min-width: 62em) {
@@ -746,4 +739,5 @@ header .logo h1 {
 }
 /* ------ end of media query ------ */
 /*@import "mobilemenu";*/
+
 /*# sourceMappingURL=styles.css.map */

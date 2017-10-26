@@ -1,0 +1,4 @@
+1. In mobile view: 
+    1.1 when touch event is executed on hamburger icon then, for a fraction of second, a blueish-black color background flashback. 
+
+    1.2 when click event takes place on hamburger menu than unexpected border-color is visible

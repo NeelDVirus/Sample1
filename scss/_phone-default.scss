@@ -58,6 +58,17 @@ header {
         h1 {
             display: none;
         }
+    }    
+    .nav-main {
+        li {
+            list-style: none;
+        }
+        li a {
+            text-decoration: none;
+        }
+        li.heading {
+            text-align: center;
+        }
     }
 }
 

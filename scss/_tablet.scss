@@ -10,30 +10,37 @@
 /*-----------------------------------------------------
 ---------    Header And Navigation    -----------------
 -----------------------------------------------------*/
-    .nav-wrapper {position: relative;}
-	.nav-main {
-        ul {
-            display: block;
-            position: absolute;
-            top: 50%;
-            right: 0%;
-            transform: translateY(-50%);
-            
-            li {
+
+
+header {
+    .nav-button {
+        //display: none;
+    }
+}
+
+
+.nav-wrapper {position: relative;}
+.nav-main {
+    ul {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0%;
+        transform: translateY(-50%);
+          
+        li {
+            display: inline-block;
+            a {
                 display: inline-block;
-                a {
-                    display: inline-block;
-                    color: #fff;
-                    text-decoration: none;
-                    text-transform: capitalize;
-                    padding: .3em;
-                }
+                color: #fff;
+                text-decoration: none;
+                text-transform: capitalize;
+                padding: .3em;
             }
         }
-        .nav-button {
-            display: none;
-        }   
     }
+} //end of .nav-main
+
 
 
 } /* -----end of media querry--- */
