@@ -498,8 +498,7 @@ header {
 }
 header .logo {
   width: 5em;
-  text-align: center;
-  margin: 10px auto;
+  margin: 10px 0;
   font-size: 1.2em;
   padding: 5.5px 10px;
   border: 1px solid #fff;
@@ -513,191 +512,195 @@ header .nav-main li {
 header .nav-main li a {
   text-decoration: none;
 }
-header .nav-main li.heading {
-  text-align: center;
-}
 
-/*This partial-scss file is being imported in _phone-default*/
-.nav-button {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1001;
-}
+@media only screen and (max-width: 47.9375em) {
+  header .logo {
+    text-align: center;
+    margin: 10px auto;
+  }
+  header .nav-main li.heading {
+    text-align: center;
+  }
 
-/*!
- * Hamburgers
- * @description Tasty CSS-animated hamburgers
- * @author Jonathan Suh @jonsuh
- * @site https://jonsuh.com/hamburgers
- * @link https://github.com/jonsuh/hamburgers
- */
-.hamburger {
-  padding: 15px 15px;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-transition-property: opacity, -webkit-filter;
-  transition-property: opacity, -webkit-filter;
-  transition-property: opacity, filter;
-  transition-property: opacity, filter, -webkit-filter;
-  -webkit-transition-duration: 0.15s;
-          transition-duration: 0.15s;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-  font: inherit;
-  color: inherit;
-  text-transform: none;
-  background-color: black;
-  border: 0;
-  margin: 0;
-  overflow: visible;
-}
-.hamburger:hover {
-  opacity: 1;
-}
+  /*This partial-scss file is being imported in _phone-default*/
+  .nav-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+  }
 
-.hamburger-box {
-  width: 40px;
-  height: 22px;
-  display: inline-block;
-  position: relative;
-}
+  /*!
+   * Hamburgers
+   * @description Tasty CSS-animated hamburgers
+   * @author Jonathan Suh @jonsuh
+   * @site https://jonsuh.com/hamburgers
+   * @link https://github.com/jonsuh/hamburgers
+   */
+  .hamburger {
+    padding: 15px 15px;
+    display: inline-block;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: #000;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+  }
 
-.hamburger-inner {
-  display: block;
-  top: 50%;
-  margin-top: -2px;
-}
-.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-  width: 40px;
-  height: 4px;
-  background-color: #fff;
-  border-radius: 4px;
-  position: absolute;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-transition-duration: 0.15s;
-          transition-duration: 0.15s;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
-}
-.hamburger-inner::before, .hamburger-inner::after {
-  content: "";
-  display: block;
-}
-.hamburger-inner::before {
-  top: -9px;
-}
-.hamburger-inner::after {
-  bottom: -9px;
-}
+  .hamburger-box {
+    width: 40px;
+    height: 22px;
+    display: inline-block;
+    position: relative;
+  }
 
-/*
- * Squeeze
- */
-.hamburger--squeeze .hamburger-inner {
-  -webkit-transition-duration: 0.075s;
-          transition-duration: 0.075s;
-  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-.hamburger--squeeze .hamburger-inner::before {
-  -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
-  transition: top 0.075s 0.12s ease, opacity 0.075s ease;
-}
-.hamburger--squeeze .hamburger-inner::after {
-  -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-.hamburger--squeeze.is-active .hamburger-inner {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transition-delay: 0.12s;
-          transition-delay: 0.12s;
-  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-.hamburger--squeeze.is-active .hamburger-inner::before {
-  top: 0;
-  opacity: 0;
-  -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
-  transition: top 0.075s ease, opacity 0.075s 0.12s ease;
-}
-.hamburger--squeeze.is-active .hamburger-inner::after {
-  bottom: 0;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  -webkit-transition: bottom 0.075s ease, -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: bottom 0.075s ease, -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
-  transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
+  .hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+  }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 4px;
+    position: absolute;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-duration: 0.15s;
+            transition-duration: 0.15s;
+    -webkit-transition-timing-function: ease;
+            transition-timing-function: ease;
+  }
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block;
+  }
+  .hamburger-inner::before {
+    top: -9px;
+  }
+  .hamburger-inner::after {
+    bottom: -9px;
+  }
 
-/* General styles for all menus */
-.cbp-spmenu {
-  background: #47a3da;
-  position: fixed;
-}
+  /*
+   * Squeeze
+   */
+  .hamburger--squeeze .hamburger-inner {
+    -webkit-transition-duration: 0.075s;
+            transition-duration: 0.075s;
+    -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  .hamburger--squeeze .hamburger-inner::before {
+    -webkit-transition: top 0.075s 0.12s ease;
+    transition: top 0.075s 0.12s ease;
+  }
+  .hamburger--squeeze .hamburger-inner::after {
+    -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  .hamburger--squeeze.is-active .hamburger-inner {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transition-delay: 0.12s;
+            transition-delay: 0.12s;
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  .hamburger--squeeze.is-active .hamburger-inner::before {
+    top: 0;
+    -webkit-transition: top 0.075s ease;
+    transition: top 0.075s ease;
+  }
+  .hamburger--squeeze.is-active .hamburger-inner::after {
+    bottom: 0;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    -webkit-transition: bottom 0.075s ease, -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: bottom 0.075s ease, -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
 
-.cbp-spmenu .heading {
-  color: #afdefa;
-  font-size: 1.9em;
-  padding: 20px;
-  margin: 0;
-  font-weight: 300;
-  background: #0d77b6;
-}
+  /* General styles for all menus */
+  .cbp-spmenu {
+    background: #47a3da;
+    position: fixed;
+  }
 
-.cbp-spmenu a {
-  display: block;
-  color: #fff;
-  font-size: 1.2em;
-  font-weight: 300;
-}
+  .cbp-spmenu .heading {
+    color: #afdefa;
+    font-size: 1.9em;
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+    background: #0d77b6;
+  }
 
-.cbp-spmenu a:hover {
-  background: #258ecd;
-}
+  .cbp-spmenu a {
+    display: block;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 300;
+  }
 
-.cbp-spmenu a:active {
-  background: #afdefa;
-  color: #47a3da;
-}
+  .cbp-spmenu a:hover {
+    background: #258ecd;
+  }
 
-/* Orientation-dependent styles for the content of the menu */
-.cbp-spmenu-vertical {
-  width: 240px;
-  height: 100%;
-  top: 0;
-  z-index: 1000;
-}
+  .cbp-spmenu a:active {
+    background: #afdefa;
+    color: #47a3da;
+  }
 
-.cbp-spmenu-vertical a {
-  border-bottom: 1px solid #258ecd;
-  padding: 1em;
-}
+  /* Orientation-dependent styles for the content of the menu */
+  .cbp-spmenu-vertical {
+    width: 240px;
+    height: 100%;
+    top: 0;
+    z-index: 1000;
+  }
 
-/* Vertical menu that slides from the left or right */
-.cbp-spmenu-left {
-  left: -240px;
-}
+  .cbp-spmenu-vertical a {
+    border-bottom: 1px solid #258ecd;
+    padding: 1em;
+  }
 
-.cbp-spmenu-left.cbp-spmenu-open {
-  left: 0px;
-}
+  /* Vertical menu that slides from the left or right */
+  .cbp-spmenu-left {
+    left: -240px;
+  }
 
-/* Transitions */
-.cbp-spmenu {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
+  .cbp-spmenu-left.cbp-spmenu-open {
+    left: 0px;
+  }
 
+  /* Transitions */
+  .cbp-spmenu {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+}
 /*-----------------------------------------------------
------------------    00 Miscellaneous    -----------------------
+-----------------    00 Miscellaneous
+
+
+    header {
+        .logo {
+            text-align: initial;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    -----------------------
 -------------------------------------------------------*/
 @media only screen and (min-width: 48em) {
   /**********************************
@@ -708,22 +711,29 @@ header .nav-main li.heading {
   /*-----------------------------------------------------
   ---------    Header And Navigation    -----------------
   -----------------------------------------------------*/
-  .nav-wrapper {
-    position: relative;
+  header .logo {
+    text-align: initial;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  header .nav-button {
+    display: none;
   }
 
-  .nav-main ul {
-    display: block;
+  .nav-wrapper {
     position: absolute;
     top: 50%;
-    right: 0%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    right: 2%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
   }
-  .nav-main ul li {
+  .nav-wrapper ul {
+    display: block;
+  }
+  .nav-wrapper ul li {
     display: inline-block;
   }
-  .nav-main ul li a {
+  .nav-wrapper ul li a {
     display: inline-block;
     color: #fff;
     text-decoration: none;
@@ -739,5 +749,4 @@ header .nav-main li.heading {
 }
 /* ------ end of media query ------ */
 /*@import "mobilemenu";*/
-
 /*# sourceMappingURL=styles.css.map */

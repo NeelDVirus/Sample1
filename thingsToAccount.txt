@@ -2,4 +2,6 @@
 
 2. using em in media queries have some quirks regarding using both min-width and max width in the some code block. check this out https://engageinteractive.co.uk/blog/em-vs-rem-vs-px
 
-3.
+3.how many decimal points to be used with em in media query
+
+4. Shall i add/remove class of third party using jquery or native css?

@@ -49,9 +49,8 @@ header {
     padding: 1px;
     color: #fff;
     .logo {
-        width: 5em;
-        text-align: center;        
-        margin: 10px auto;        
+        width: 5em;       
+        margin: 10px 0;        
         font-size: 1.2em;
         padding: 5.5px 10px;
         border: 1px solid #fff;
@@ -66,18 +65,37 @@ header {
         li a {
             text-decoration: none;
         }
-        li.heading {
-            text-align: center;
-        }
     }
 }
 
-@import "mobilemenu/mobilemenu";
+//------   For Screen size upto phone-landscape-----------
+@media only screen and (max-width: 47.9375em) { 
 
+    header {
+        .logo {
+            text-align: center;        
+            margin: 10px auto;       
+        }
+        .nav-main {            
+            li.heading {text-align: center;}
+        }
+    }
 
+    @import "mobilemenu/mobilemenu";
+}
 
 
 
 /*-----------------------------------------------------
------------------    00 Miscellaneous    -----------------------
+-----------------    00 Miscellaneous
+
+
+    header {
+        .logo {
+            text-align: initial;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    -----------------------
 -------------------------------------------------------*/
