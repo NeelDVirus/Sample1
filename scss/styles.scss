@@ -1,7 +1,7 @@
-@import "complementing-scss/normalize";
-@import "complementing-scss/normalize-extended";
-@import "complementing-scss/variables";
-@import "complementing-scss/mixins";
+@import "intrinsic-scss/reset";
+@import "intrinsic-scss/genericStyles";
+@import "intrinsic-scss/variables";
+@import "intrinsic-scss/mixins";
 @import "phone-default";
 @import "phone-landscape";
 @import "tablet";

@@ -12,36 +12,56 @@
 -----------------------------------------------------*/
 
 header {
+    //undoing effect from Phone-default
     .logo {
         text-align: initial;
         margin-left: 0;
         margin-right: 0;
     }
+    //removing phone-effect
     .nav-button {
         display: none;
     }
 }
 
-
+//------------ Navbar section-----------
 .nav-wrapper {
     position: absolute; //.header-wrapper has position: fixed
     top: 50%;
     right: $gutter;
     transform: translate(0, -50%);
+}
+.nav-main {
     ul {
         display: block;          
-    li {
-        display: inline-block;
-        a {
+        li {
             display: inline-block;
-            color: #fff;
-            text-decoration: none;
-            text-transform: capitalize;
-            padding: .3em;
+            padding: 0 0.6em;
+            border-right: 1px solid darken(#fff, 50%);
+            
+            &:last-child {
+                border-right: none;
+            }
+            a {
+                display: inline-block;
+                color: #fff;
+                text-decoration: none;
+                text-transform: capitalize;
+                padding: .3em;
+            }
+        }
+        li.heading {
+            display: none;
         }
     }
-}
 } //end of .nav-main
+//------------End of Nav-bar section--------
+
+
+
+
+
+
 
 
 

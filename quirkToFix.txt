@@ -2,3 +2,5 @@
     1.1 when touch event is executed on hamburger icon then, for a fraction of second, a blueish-black color background flashback. 
 
     1.2 when click event takes place on hamburger menu than unexpected border-color is visible
+
+    1.2 sidemenu in landscape-portrait mode, do scrollbar or something else

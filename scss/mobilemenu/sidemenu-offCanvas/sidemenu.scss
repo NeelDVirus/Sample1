@@ -3,13 +3,17 @@
 .cbp-spmenu {
     background: #47a3da;
     position: fixed;
+    font-family: $lato;
+    font-weight: normal;
+    font-size: 1.6rem; // 16px
 }
 
 .cbp-spmenu .heading {
     color: #afdefa;
-    font-size: 1.9em;
-    padding: 20px;
+    font-size: 1.9em; // 30.4px
+    padding: 0.65789em; //20px
     margin: 0;
+    text-align: center;
     font-weight: 300;
     background: #0d77b6;
 }
@@ -32,7 +36,7 @@
 /* Orientation-dependent styles for the content of the menu */
 
 .cbp-spmenu-vertical {
-    width: 240px;
+    width: 200px;
     height: 100%;
     top: 0;
     z-index: 1000;
