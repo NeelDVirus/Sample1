@@ -1,14 +1,11 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <!-- 
-    1. Tells phone not to lie about their width (css/software pixel Vs. hardware pixel)
-    2. maximum-scale =1 don't let the user zoom in the web page
-     -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="utf-8">    
+<!--1. Tells phone not to lie about their width (css/software pixel Vs. hardware pixel)
+    2. maximum-scale =1 don't let the user zoom in the web page-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1", shrink-to-fit=no;>
     <title>Untitle Document</title>
-
     <link href="https://fonts.googleapis.com/css?family=Lato:300|Open+Sans:300,600" rel="stylesheet">
     
     <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -21,14 +18,16 @@
 <!-- Header-Wrapper -->
 <div class="header-wrapper">
 <header class="header row clearfix">
+    <!-- Component_Logo -->
     <div class="logo">
         LOGO
         <h1>Company name</h1>
     </div>
+
     <!-- Component__navigation -->
-    <div class="nav-wrapper">
-        <nav class="nav-main clearfix">
-            <ul class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+    <div class="nav-wrapper cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+        <nav class="nav-main">
+            <ul class="">
                 <li class="heading">Menu</li>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About us</a></li>
@@ -38,7 +37,9 @@
                 <li><a href="#">Contact Us</a></li>
             </ul>
         </nav>
-    </div> <!-- End__nav-wrapper -->    
+    </div> <!-- End__nav-wrapper -->  
+    
+    <!-- Component_Button -->
     <button class="nav-button hamburger hamburger--squeeze" id="showLeft" type="button">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
@@ -47,6 +48,8 @@
 </header>
 </div>
 <!-- End___header-wrapper -->
+
+
 <div>rough</div>
 <div>rough</div>
 <div>rough</div>

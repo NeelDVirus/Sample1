@@ -5,3 +5,9 @@
 3.how many decimal points to be used with em in media query
 
 4. Shall i add/remove class of third party using jquery or native css?
+
+5. how to make the width of all the <li> elements same as the size of the longest-width <li> element. 
+Ex: in navbar width of <li>blog</li> is small. needed to be equal
+
+6. device a plan to use this for further user experience efficiency
+        media only screen and (orientation: portrait) and (min-width: 960px)

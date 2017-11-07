@@ -41,20 +41,24 @@ body {
 -----------------   2. HEADER     ---------------------
 -----------------------------------------------------*/
 .header-wrapper {
+    font-size: 1.6rem;
     position: fixed;    
     background-color: #000;
     width: 100%;
+    min-height: 54px; //match the height of the hamburger-icon
 }
-header {    
-    font-size: 1.6rem;
-    padding: 1px;
+header {
+    padding: 1px; //prevention: margin-collapsing
     color: #fff;
     .logo {
+        float: left;    
+        font-size: 1.6rem; //16px
         width: 5em;       
-        margin: 10px 0;        
+        margin: 0.625em 0;        
         font-size: 1.2em;
-        padding: 5.5px 10px;
-        border: 1px solid #fff;
+        padding: 0.25em 0.625em;
+        border: 1px solid #fff;        
+        text-align: center; 
         h1 {
             display: none;
         }
@@ -65,10 +69,6 @@ header {
 @media only screen and (max-width: 47.9375em) { 
 
     header {
-        .logo {
-            text-align: center;        
-            margin: 10px auto;       
-        }
     }
 
     @import "mobilemenu/mobilemenu";

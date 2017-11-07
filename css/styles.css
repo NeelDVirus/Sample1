@@ -57,7 +57,7 @@ html {
 }
 
 body {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 a {
@@ -116,39 +116,38 @@ body {
 -----------------   2. HEADER     ---------------------
 -----------------------------------------------------*/
 .header-wrapper {
+  font-size: 1.6rem;
   position: fixed;
   background-color: #000;
   width: 100%;
+  min-height: 54px;
 }
 
 header {
-  font-size: 1.6rem;
   padding: 1px;
   color: #fff;
 }
 header .logo {
+  float: left;
+  font-size: 1.6rem;
   width: 5em;
-  margin: 10px 0;
+  margin: 0.625em 0;
   font-size: 1.2em;
-  padding: 5.5px 10px;
+  padding: 0.25em 0.625em;
   border: 1px solid #fff;
+  text-align: center;
 }
 header .logo h1 {
   display: none;
 }
 
 @media only screen and (max-width: 47.9375em) {
-  header .logo {
-    text-align: center;
-    margin: 10px auto;
-  }
-
-  /*This partial-scss file is being imported in _phone-default*/
   .nav-button {
-    position: absolute;
+    /*position: absolute;
     top: 0;
     left: 0;
-    z-index: 1001;
+    z-index: 1001;*/
+    float: right;
   }
 
   /*!
@@ -329,16 +328,12 @@ header .logo h1 {
   /*-----------------------------------------------------
   ---------    Header And Navigation    -----------------
   -----------------------------------------------------*/
-  header .logo {
-    text-align: initial;
-    margin-left: 0;
-    margin-right: 0;
-  }
   header .nav-button {
     display: none;
   }
 
   .nav-wrapper {
+    font-size: 1.4rem;
     position: absolute;
     top: 50%;
     right: 2%;
@@ -346,13 +341,13 @@ header .logo h1 {
             transform: translate(0, -50%);
   }
 
-  .nav-main ul {
-    display: block;
+  .nav-main {
+    font-family: "Lato", sans-serif;
   }
   .nav-main ul li {
     display: inline-block;
-    padding: 0 0.6em;
-    border-right: 1px solid gray;
+    padding: 0 0.7em;
+    border-right: 1px solid #4d4d4d;
   }
   .nav-main ul li:last-child {
     border-right: none;
@@ -361,7 +356,7 @@ header .logo h1 {
     display: inline-block;
     color: #fff;
     text-decoration: none;
-    text-transform: capitalize;
+    text-transform: uppercase;
     padding: .3em;
   }
   .nav-main ul li.heading {
@@ -370,11 +365,13 @@ header .logo h1 {
 }
 /* -----end of media querry--- */
 @media only screen and (min-width: 62em) {
-  h1 {
-    color: silver;
+  /******************************************************
+  *********    Header And Navigation    *****************
+  ******************************************************/
+  .nav-wrapper {
+    font-size: 1.6rem;
   }
 }
 /* ------ end of media query ------ */
 /*@import "mobilemenu";*/
-
 /*# sourceMappingURL=styles.css.map */
