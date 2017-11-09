@@ -192,7 +192,7 @@ header .logo h1 {
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
     width: 2.5em;
     height: 0.25em;
-    background-color: #fff;
+    background-color: #ccc;
     border-radius: 0.25em;
     position: absolute;
     -webkit-transition-property: -webkit-transform;
@@ -240,7 +240,7 @@ header .logo h1 {
   }
   .hamburger--squeeze.is-active {
     border-radius: 50%;
-    border: 1px solid #ccc;
+    border: 1px solid #eee;
     padding: 0.75em 0.8125em;
     background-color: rgba(0, 0, 0, 0.6);
   }
@@ -272,10 +272,12 @@ header .logo h1 {
   .hamburger--squeeze.is-active .hamburger-inner {
     width: 1.4375em;
     height: 0.25em;
+    background-color: #FFF;
   }
   .hamburger--squeeze.is-active .hamburger-inner::before, .hamburger--squeeze.is-active .hamburger-inner::after {
     width: 1.4375em;
     height: 0.25em;
+    background-color: #fff;
   }
 
   /* General styles for all menus */
