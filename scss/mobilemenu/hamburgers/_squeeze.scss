@@ -39,27 +39,38 @@
                                 transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
                 }
             }
-            //----Self-made-edits----
+
+            /**********************************
+            *****   Self-made-edits      ******
+            ***********************************/
             .hamburger-box {
                 width: 1.4375em; // 23px/
             }
             .hamburger-inner {
                 width: 1.4375em; // 23px/16
                 height: 0.25em; // 4px/16
-                background-color: #FFF;
                 height:3px;
+                background-color: #FFF;
                 
                 &::before, &::after {
                     width: 1.4375em; // 23px/16
                     height: 0.25em; // 4px/16
-                    background-color: #fff;
-                height: 3px;
+                    height: 3px;
+                background-color: #FFF;
                 }
             }
             border-radius: 50%;
             border: 2px solid rgba(255,255,255, 0.6);
             padding: 0.5625em 0.625em 0.5em 0.625em; //9px 10px 8px 10px
             background-color: rgba(30,30,30,0.4); //333
+            /*************************************
+            *****   END of Self-made-edits  ******
+            **************************************/
+            border: 2px solid #fff;
+            padding: 0.5625em 0.625em 0.5em 0.625em; //9px 10px 8px 10px
+            padding: 0.5625em 0.5625em 0.5em 0.5625em;
+            background-color: rgba(0,0,0,0.8); //333
+
 
         } //End of .is-active
     }//End of .hambergur-squeeze

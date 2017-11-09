@@ -239,10 +239,20 @@ header .logo h1 {
     transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
   .hamburger--squeeze.is-active {
+    /**********************************
+    *****   Self-made-edits      ******
+    ***********************************/
     border-radius: 50%;
     border: 2px solid rgba(255, 255, 255, 0.6);
     padding: 0.5625em 0.625em 0.5em 0.625em;
     background-color: rgba(30, 30, 30, 0.4);
+    /*************************************
+    *****   END of Self-made-edits  ******
+    **************************************/
+    border: 2px solid #fff;
+    padding: 0.5625em 0.625em 0.5em 0.625em;
+    padding: 0.5625em 0.5625em 0.5em 0.5625em;
+    background-color: rgba(0, 0, 0, 0.8);
   }
   .hamburger--squeeze.is-active .hamburger-inner {
     -webkit-transform: rotate(45deg);
@@ -272,14 +282,14 @@ header .logo h1 {
   .hamburger--squeeze.is-active .hamburger-inner {
     width: 1.4375em;
     height: 0.25em;
-    background-color: #FFF;
     height: 3px;
+    background-color: #FFF;
   }
   .hamburger--squeeze.is-active .hamburger-inner::before, .hamburger--squeeze.is-active .hamburger-inner::after {
     width: 1.4375em;
     height: 0.25em;
-    background-color: #fff;
     height: 3px;
+    background-color: #FFF;
   }
 
   /* General styles for all menus */
