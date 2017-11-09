@@ -240,10 +240,9 @@ header .logo h1 {
   }
   .hamburger--squeeze.is-active {
     border-radius: 50%;
-    border: 2px solid #eee;
-    padding: 0.75em 0.8125em;
-    padding: 9px 10px;
-    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    padding: 0.5625em 0.625em 0.5em 0.625em;
+    background-color: rgba(30, 30, 30, 0.4);
   }
   .hamburger--squeeze.is-active .hamburger-inner {
     -webkit-transform: rotate(45deg);
