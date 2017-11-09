@@ -41,22 +41,25 @@
             }
             //----Self-made-edits----
             .hamburger-box {
-                width: 1.4375em; // 23px/16
+                width: 1.4375em; // 23px/
             }
             .hamburger-inner {
                 width: 1.4375em; // 23px/16
                 height: 0.25em; // 4px/16
                 background-color: #FFF;
+                height:3px;
                 
                 &::before, &::after {
                     width: 1.4375em; // 23px/16
                     height: 0.25em; // 4px/16
                     background-color: #fff;
+                height: 3px;
                 }
             }
             border-radius: 50%;
-            border: 1px solid #eee;
-            padding: 0.75em 0.8125em; // 12px/16 13px/16           
+            border: 2px solid #eee;
+            padding: 0.75em 0.8125em; // 12px/16 13px/16
+            padding: 9px 10px;
             background-color: rgba(0,0,0,0.6); //333
 
         } //End of .is-active
