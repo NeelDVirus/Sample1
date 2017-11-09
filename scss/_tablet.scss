@@ -37,6 +37,10 @@ header {
 }
 .nav-main {
     font-family: $lato;
+    
+    .heading {
+        display: none;
+    }
     ul {
         //display: block;          
         li {
@@ -54,9 +58,6 @@ header {
                 text-transform: uppercase;
                 padding: .3em;
             }
-        }
-        li.heading {
-            display: none;
         }
     }
 } //end of .nav-main

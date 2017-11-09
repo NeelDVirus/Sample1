@@ -30,14 +30,21 @@ $gutter: 2%;
 /***********************************************  
 ***********   For media queries    *************
 ************************************************/
-$xmBp : 36em; //576px
-$xmBpLess: 36.9375; //575px (maximum size of phone-default)
 
-$smBp : 48em; //768px
-$smBpLess: 47.9375; //767 (maximum size of phone-landscape)
+//medium devices: some tablets
+//large devices: some tablets desktop and laptops
+//extra large device : some desktop and laptops
 
-$lgBp : 62em; //992px
-$lgBpLess:  61.9375; //991px  (maximum size of tablet)
+$xmBpLess: 36.9375;       //575px   maximum size of phone-default
+$xmBp : 36em;             //576px   minimum size of phone-landscape
 
-$xlBp : 75em; //1200px
-$xlBpLess: 74.9375; //1199px  (maximum size of desktop)
+$smBpLess: 47.9375;       //767     maximum size of phone-landscape
+$smBp : 48em;             //768px   minimum size of medium device
+
+$lgBpLess:  61.9375;      //991px   maximum size of medium device 
+$lgBp : 62em;             //992px   minimum size of large device 
+
+$xlBpLess: 74.9375;       //1199px  maximum size of large device
+$xlBp : 75em;             //1200px  minimum size of extra large devices
+
+//to make: breaking point of 1600px as maximum size of extra large devices

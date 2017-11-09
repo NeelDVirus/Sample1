@@ -67,10 +67,6 @@ header {
 
 //------   For Screen size upto phone-landscape-----------
 @media only screen and (max-width: 47.9375em) { 
-
-    header {
-    }
-
     @import "mobilemenu/mobilemenu";
 }
 

@@ -1,12 +1,31 @@
 //This partial-scss file is being imported in _phone-default
 .nav-button {
-    /*position: absolute;
+    position: fixed;
     top: 0;
-    left: 0;
-    z-index: 1001;*/
-    float: right;
+    right: 0;   
+    z-index: 1001;
+    font-size: 1.6rem;    
+    //transition for .nav-button-wrapper.change-height;
+    transition: all .3s ease-in; 
+}
+
+
+//Changing-position__Hambergur-menu__
+.change-height {
+    top: 0.625em; // 10px/16
+    right: 0.3125em; // 10px/16
 }
 
 // Hamburger icon for open and close menu
 @import "hamburgers/hamburgers";
 @import "sidemenu-offCanvas/sidemenu";
+
+
+    /*
+    height: 4.37305em; // 69.9688px/16
+    > .nav-button {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translatey(-50%);        
+    }*/    

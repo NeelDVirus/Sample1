@@ -8,13 +8,13 @@
 
 // Settings
 // ==================================================
-$hamburger-padding-x                       : 15px !default; //default:15px
-$hamburger-padding-y                       : 15px !default; //default:15px
-$hamburger-layer-width                     : 40px !default;
-$hamburger-layer-height                    : 4px !default; //default: 4px
-$hamburger-layer-spacing                   : 5px !default; //default: 6px
+$hamburger-padding-x                       : 0.9375em !default; //15px/16 default:15px
+$hamburger-padding-y                       : 0.9375em !default; //15px/16 default:15px
+$hamburger-layer-width                     : 2.5em !default; //40px/16
+$hamburger-layer-height                    : 0.25em !default; //4px/16default: 4px
+$hamburger-layer-spacing                   : 0.3125em !default; //5px/16default: 6px
 $hamburger-layer-color                     : #fff !default;
-$hamburger-layer-border-radius             : 4px !default;
+$hamburger-layer-border-radius             : 0.25em !default; //4px/16
 
 // To use CSS filters as the hover effect instead of opacity,
 // set $hamburger-hover-use-filter as true and
