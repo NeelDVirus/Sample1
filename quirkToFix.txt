@@ -6,3 +6,5 @@
     1.2 sidemenu in landscape-portrait mode, do scrollbar or something else
 
 2. swtich to the 92ppi/dpi from 72ppi/dpi
+
+3. is the media query for back-ground images approach correct in _banner.scss

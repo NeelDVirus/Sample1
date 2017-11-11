@@ -379,19 +379,29 @@ header .logo h1 {
   background-size: cover;
 }
 
-@media only screen and (min-width: 320px) {
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 1.125), only screen and (min-resolution: 108dpi) {
   .banner {
     background-image: url("../images/banner/01mobile/banner576-1024.jpg");
   }
 }
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 360px) {
+  .banner {
+    background-image: url("../images/banner/01mobile/banner576-1024.jpg");
+  }
+}
+@media only screen and (min-width: 768px) {
+  .banner {
+    background-image: url("../images/banner/02tablet/banner768-1024.jpg");
+  }
+}
+@media only screen and (min-width: 1366px) {
   .banner {
     background-image: url("../images/banner/03desktop/banner1366-768.jpg");
   }
 }
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1920px) {
   .banner {
-    background-image: url("../images/banner/03desktop/banner1366-768.jpg");
+    background-image: url("../images/banner/03desktop/banner1920-1080.jpg");
   }
 }
 /*-----------------------------------------------------

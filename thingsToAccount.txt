@@ -29,3 +29,4 @@ Ex: in navbar width of <li>blog</li> is small. needed to be equal
             @media only screen and (min-width: 1300px) {
               .banner{background-image: url("../images/banner/03desktop/banner1366-768.jpg");}
             }
+

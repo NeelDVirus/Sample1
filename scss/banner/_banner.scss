@@ -1,23 +1,29 @@
 
-.banner-wrapper {
-    height: 100%;
+.banner-wrapper {height: 100%;}
 
-    .banner {
-        height: 100%;
-        background-image: url("../images/banner/01mobile/banner360-640.jpg");
-        background-size: cover;
-    }
+.banner {
+    height: 100%;
+    background-image: url("../images/banner/01mobile/banner360-640.jpg");
+    background-size: cover;
 }
 
-@media only screen and (max-width: 360px) {
-  .banner{background-image: url("../images/banner/01mobile/banner576-1024.jpg");}
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5),
+     only screen and (-o-min-device-pixel-ratio: 3/2),
+     only screen and (min--moz-device-pixel-ratio: 1.5),
+     only screen and (min-device-pixel-ratio: 1.5),
+     only screen and (min-resolution: 108dpi) {
+        .banner {background-image: url("../images/banner/01mobile/banner576-1024.jpg");}
+}
+
+@media only screen and (min-width: 360px) {
+  .banner {background-image: url("../images/banner/01mobile/banner576-1024.jpg");}
 }
 @media only screen and (min-width: 768px) {
-  .banner{background-image: url("../images/banner/03desktop/banner768-1024.jpg");}
+  .banner {background-image: url("../images/banner/02tablet/banner768-1024.jpg");}
 }
 @media only screen and (min-width: 1366px) {
-  .banner{background-image: url("../images/banner/03desktop/banner1366-768.jpg");}
+  .banner {background-image: url("../images/banner/03desktop/banner1366-768.jpg");}
 }
 @media only screen and (min-width: 1920px) {
-  .banner{background-image: url("../images/banner/03desktop/banner1920-1080.jpg");}
-}
+  .banner {background-image: url("../images/banner/03desktop/banner1920-1080.jpg");}
+} 
