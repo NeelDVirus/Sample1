@@ -374,9 +374,11 @@ header .logo h1 {
 }
 
 .banner {
+  width: 100%;
   height: 100%;
   background-image: url("../images/banner/01mobile/banner360-640.jpg");
-  background-size: cover;
+  background-size: 100% 100%;
+  background-position: auto;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 1.125), only screen and (min-resolution: 108dpi) {
@@ -460,4 +462,5 @@ header .logo h1 {
 }
 /* ------ end of media query ------ */
 /*@import "mobilemenu";*/
+
 /*# sourceMappingURL=styles.css.map */
