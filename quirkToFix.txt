@@ -4,3 +4,5 @@
     1.2 when click event takes place on hamburger menu than unexpected border-color is visible
 
     1.2 sidemenu in landscape-portrait mode, do scrollbar or something else
+
+2. swtich to the 92ppi/dpi from 72ppi/dpi

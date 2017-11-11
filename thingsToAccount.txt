@@ -11,3 +11,21 @@ Ex: in navbar width of <li>blog</li> is small. needed to be equal
 
 6. device a plan to use this for further user experience efficiency
         media only screen and (orientation: portrait) and (min-width: 960px)
+
+7. reliable way of using implmenting background-images with media query concerning that the non-required images dont get downloaded when viewed from large screen size (for example: >1300 in the code below )
+
+            .banner {
+                height: 100vh;
+                background-image: url("../images/banner/01mobile/banner360-640.jpg");
+                background-size: cover;
+            }
+            @media only screen and (min-width: 320px) {
+              .banner{background-image: url("../images/banner/01mobile/banner576-1024.jpg");}
+            }
+            @media only screen and (min-width: 700px) {
+              .banner{background-image: url("../images/banner/03desktop/banner760-1024.jpg");}
+
+            }
+            @media only screen and (min-width: 1300px) {
+              .banner{background-image: url("../images/banner/03desktop/banner1366-768.jpg");}
+            }

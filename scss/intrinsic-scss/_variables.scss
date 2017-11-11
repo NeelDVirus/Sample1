@@ -3,13 +3,16 @@
 ***************   TYPOGRAPHY    ****************
 ************************************************/
 
-//font-family: 'Lato', sans-serif;
-//font-family: 'Open Sans', sans-serif;
+//---- FONT FAMILIES----
+
+//OPEN SANS
 $openSans: 'Open Sans', sans-serif;
+$normal-openSans: 300;
+$bold-openSans: 600;
+//LATO
 $lato: 'Lato', sans-serif;
-//font sizes--> only $normal for lato, and both for "open sans"
-$normal: 300; //both for "Open Sans" and lato
-$bold: 600;
+$normal-lato: 300;
+$bold-lato: 400;
 
 
 //--------- COLOR--------------

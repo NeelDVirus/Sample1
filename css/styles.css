@@ -54,10 +54,12 @@ table {
 
 html {
   font-size: 62.5%;
+  height: 100%;
 }
 
 body {
   font-size: 1.6rem;
+  height: 100%;
 }
 
 a {
@@ -192,7 +194,7 @@ header .logo h1 {
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
     width: 2.5em;
     height: 0.25em;
-    background-color: #ccc;
+    background-color: #eee;
     border-radius: 0.25em;
     position: absolute;
     -webkit-transition-property: -webkit-transform;
@@ -365,10 +367,35 @@ header .logo h1 {
   }*/
 }
 /*-----------------------------------------------------
------------------    00 Miscellaneous
+--------------      2. Banner        ------------------
+-------------------------------------------------------*/
+.banner-wrapper {
+  height: 100%;
+}
 
+.banner {
+  height: 100%;
+  background-image: url("../images/banner/01mobile/banner360-640.jpg");
+  background-size: cover;
+}
 
-    -----------------------
+@media only screen and (min-width: 320px) {
+  .banner {
+    background-image: url("../images/banner/01mobile/banner576-1024.jpg");
+  }
+}
+@media only screen and (min-width: 700px) {
+  .banner {
+    background-image: url("../images/banner/03desktop/banner1366-768.jpg");
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .banner {
+    background-image: url("../images/banner/03desktop/banner1366-768.jpg");
+  }
+}
+/*-----------------------------------------------------
+-----------------   00 Miscellaneous  -----------------
 -------------------------------------------------------*/
 @media only screen and (min-width: 48em) {
   /**********************************
@@ -394,6 +421,7 @@ header .logo h1 {
 
   .nav-main {
     font-family: "Lato", sans-serif;
+    font-weight: 300;
   }
   .nav-main .heading {
     display: none;
@@ -419,11 +447,7 @@ header .logo h1 {
   /******************************************************
   *********    Header And Navigation    *****************
   ******************************************************/
-  .nav-wrapper {
-    font-size: 1.6rem;
-  }
 }
 /* ------ end of media query ------ */
 /*@import "mobilemenu";*/
-
 /*# sourceMappingURL=styles.css.map */
