@@ -1,12 +1,15 @@
 
-.banner-wrapper {height: 100%;}
+.banner-wrapper {
+    height: 100%; 
+    font-size: 1.6rem; //16px
+}
 
 .banner {
     width: 100%;
     height: 100%;
     background-image: url("../images/banner/01mobile/banner360-640.jpg");
-    background-size: 100% 100%; //use cover to maintain the aspect ratio
-    background-position: auto;
+    background-size: cover; //use cover to maintain the aspect ratio
+    background-position: center;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio : 1.5),
@@ -17,15 +20,18 @@
         .banner {background-image: url("../images/banner/01mobile/banner576-1024.jpg");}
 }
 
-@media only screen and (min-width: 360px) {
+@media only screen and (min-width: 22.5em) { //22.5em = 360px
   .banner {background-image: url("../images/banner/01mobile/banner576-1024.jpg");}
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) { //48em = 768px
   .banner {background-image: url("../images/banner/02tablet/banner768-1024.jpg");}
 }
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 75em) { //75em = 1200px
   .banner {background-image: url("../images/banner/03desktop/banner1366-768.jpg");}
 }
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 83.96em) { //83.375 = 1366px
+  .banner {background-image: url("../images/banner/03desktop/banner1366-768.jpg");}
+}
+@media only screen and (min-width: 120em) { // 120em = 1920px
   .banner {background-image: url("../images/banner/03desktop/banner1920-1080.jpg");}
 } 

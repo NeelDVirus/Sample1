@@ -371,14 +371,15 @@ header .logo h1 {
 -------------------------------------------------------*/
 .banner-wrapper {
   height: 100%;
+  font-size: 1.6rem;
 }
 
 .banner {
   width: 100%;
   height: 100%;
   background-image: url("../images/banner/01mobile/banner360-640.jpg");
-  background-size: 100% 100%;
-  background-position: auto;
+  background-size: cover;
+  background-position: center;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 1.125), only screen and (min-resolution: 108dpi) {
@@ -386,22 +387,27 @@ header .logo h1 {
     background-image: url("../images/banner/01mobile/banner576-1024.jpg");
   }
 }
-@media only screen and (min-width: 360px) {
+@media only screen and (min-width: 22.5em) {
   .banner {
     background-image: url("../images/banner/01mobile/banner576-1024.jpg");
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   .banner {
     background-image: url("../images/banner/02tablet/banner768-1024.jpg");
   }
 }
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 75em) {
   .banner {
     background-image: url("../images/banner/03desktop/banner1366-768.jpg");
   }
 }
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 83.96em) {
+  .banner {
+    background-image: url("../images/banner/03desktop/banner1366-768.jpg");
+  }
+}
+@media only screen and (min-width: 120em) {
   .banner {
     background-image: url("../images/banner/03desktop/banner1920-1080.jpg");
   }

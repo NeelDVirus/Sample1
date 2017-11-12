@@ -30,3 +30,4 @@ Ex: in navbar width of <li>blog</li> is small. needed to be equal
               .banner{background-image: url("../images/banner/03desktop/banner1366-768.jpg");}
             }
 
+8. there might be two devices with a specific width. lets say there are available a desktop and tablet both with the width of 1200. how to specify something only for desktop or laptop with screen 1200.
