@@ -3,7 +3,7 @@
    * Squeeze
    */
     .hamburger--squeeze {
-        transition: all .3s ease-in, font-size 0ms;
+        transition: all .3s ease-in;// font-size 0ms, padding 0ms;
         .hamburger-inner {
             transition-duration: 0.075s;
             transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -20,19 +20,16 @@
 
         &.is-active {
             .hamburger-inner {
-                //width: 30px; // self-made-edit
                 transform: rotate(45deg);
                 transition-delay: 0.12s;
                 transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 
                 &::before {
-                    //width: 30px; // self-made-edit
                     top: 0;
                     transition: top 0.075s ease;
                 }
 
                 &::after {
-                    //width: 30px; // self-made-edit
                     bottom: 0;
                     transform: rotate(-90deg);
                     transition: bottom 0.075s ease,
@@ -56,7 +53,7 @@
                     width: 1.4375em; // 23px/16
                     height: 0.25em; // 4px/16
                     height: 3px;
-                background-color: #FFF;
+                    background-color: #FFF;
                 }
             }
             border-radius: 50%;

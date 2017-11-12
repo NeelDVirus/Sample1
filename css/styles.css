@@ -128,7 +128,6 @@ body {
 }
 
 .header-wrapper.unscrolled {
-  font-size: 2rem;
   background-color: transparent;
 }
 
@@ -152,8 +151,6 @@ header .logo h1 {
 @media only screen and (max-width: 47.9375em) {
   .nav-button-wrapper {
     font-size: 1em;
-    -webkit-transition: all .3s ease-in;
-    transition: all .3s ease-in;
   }
 
   .nav-button {
@@ -233,8 +230,8 @@ header .logo h1 {
    * Squeeze
    */
   .hamburger--squeeze {
-    -webkit-transition: all .3s ease-in, font-size 0ms;
-    transition: all .3s ease-in, font-size 0ms;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
   }
   .hamburger--squeeze .hamburger-inner {
     -webkit-transition-duration: 0.075s;
