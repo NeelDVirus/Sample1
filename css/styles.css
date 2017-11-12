@@ -123,6 +123,13 @@ body {
   background-color: #000;
   width: 100%;
   min-height: 54px;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.header-wrapper.unscrolled {
+  font-size: 2rem;
+  background-color: transparent;
 }
 
 header {
@@ -130,11 +137,10 @@ header {
   color: #fff;
 }
 header .logo {
+  font-size: 1.2em;
   float: left;
-  font-size: 1.6rem;
   width: 5em;
   margin: 0.625em 0;
-  font-size: 1.2em;
   padding: 0.25em 0.625em;
   border: 1px solid #fff;
   text-align: center;
@@ -144,14 +150,17 @@ header .logo h1 {
 }
 
 @media only screen and (max-width: 47.9375em) {
+  .nav-button-wrapper {
+    font-size: 1em;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+  }
+
   .nav-button {
     position: fixed;
     top: 0;
     right: 0;
     z-index: 1001;
-    font-size: 1.6rem;
-    -webkit-transition: all .3s ease-in;
-    transition: all .3s ease-in;
   }
 
   .change-height {
@@ -159,6 +168,9 @@ header .logo h1 {
     right: 0.3125em;
   }
 
+  /***********************************************************
+  ********   Hamburger icon for open and close menu   ********
+  ************************************************************/
   /*!
    * Hamburgers
    * @description Tasty CSS-animated hamburgers
@@ -221,8 +233,8 @@ header .logo h1 {
    * Squeeze
    */
   .hamburger--squeeze {
-    -webkit-transition: all .3s ease-in;
-    transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in, font-size 0ms;
+    transition: all .3s ease-in, font-size 0ms;
   }
   .hamburger--squeeze .hamburger-inner {
     -webkit-transition-duration: 0.075s;
@@ -245,16 +257,12 @@ header .logo h1 {
     *****   Self-made-edits      ******
     ***********************************/
     border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, 0.6);
-    padding: 0.5625em 0.625em 0.5em 0.625em;
-    background-color: rgba(30, 30, 30, 0.4);
+    border: 2px solid #fff;
+    padding: 0.5625em 0.5625em 0.5em 0.5625em;
+    background-color: rgba(0, 0, 0, 0.8);
     /*************************************
     *****   END of Self-made-edits  ******
     **************************************/
-    border: 2px solid #fff;
-    padding: 0.5625em 0.625em 0.5em 0.625em;
-    padding: 0.5625em 0.5625em 0.5em 0.5625em;
-    background-color: rgba(0, 0, 0, 0.8);
   }
   .hamburger--squeeze.is-active .hamburger-inner {
     -webkit-transform: rotate(45deg);
@@ -292,6 +300,10 @@ header .logo h1 {
     height: 0.25em;
     height: 3px;
     background-color: #FFF;
+  }
+
+  .hamburger--squeeze.is-active {
+    font-size: 1.6rem;
   }
 
   /* General styles for all menus */
@@ -356,15 +368,6 @@ header .logo h1 {
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
-
-  /*
-  height: 4.37305em; // 69.9688px/16
-  > .nav-button {
-      position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translatey(-50%);        
-  }*/
 }
 /*-----------------------------------------------------
 --------------      2. Banner        ------------------
@@ -429,7 +432,7 @@ header .logo h1 {
   }
 
   .nav-wrapper {
-    font-size: 1.4rem;
+    font-size: 0.875em;
     position: absolute;
     top: 50%;
     right: 2%;

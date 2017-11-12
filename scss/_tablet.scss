@@ -29,7 +29,7 @@ header {
 //------------ Navbar section-----------
 
 .nav-wrapper {        
-    font-size: 1.4rem; //16px
+    font-size: 0.875em; // relative to .header-wrapeer--> 14px
     position: absolute; //.header-wrapper has position: fixed
     top: 50%;
     right: $gutter;
