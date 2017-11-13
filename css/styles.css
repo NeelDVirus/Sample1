@@ -231,8 +231,8 @@ header .logo h1 {
    * Squeeze
    */
   .hamburger--squeeze {
-    -webkit-transition: all .3s ease-in;
-    transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in, font-size 0.15ms;
+    transition: all .3s ease-in, font-size 0.15ms;
   }
   .hamburger--squeeze .hamburger-inner {
     -webkit-transition-duration: 0.075s;
@@ -295,8 +295,7 @@ header .logo h1 {
   }
   .hamburger--squeeze.is-active .hamburger-inner::before, .hamburger--squeeze.is-active .hamburger-inner::after {
     width: 1.4375em;
-    height: 0.25em;
-    height: 3px;
+    height: 0.1875em;
     background-color: #FFF;
   }
 

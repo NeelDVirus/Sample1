@@ -3,7 +3,7 @@
    * Squeeze
    */
     .hamburger--squeeze {
-        transition: all .3s ease-in;// font-size 0ms, padding 0ms;
+        transition: all .3s ease-in, font-size 0.15ms;// padding 0ms;
         .hamburger-inner {
             transition-duration: 0.075s;
             transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -51,8 +51,7 @@
                 
                 &::before, &::after {
                     width: 1.4375em; // 23px/16
-                    height: 0.25em; // 4px/16
-                    height: 3px;
+                    height: 0.1875em; //3px/16
                     background-color: #FFF;
                 }
             }
