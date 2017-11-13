@@ -3,7 +3,6 @@
    * Squeeze
    */
     .hamburger--squeeze {
-        transition: all .3s ease-in, font-size 0.15ms;// padding 0ms;
         .hamburger-inner {
             transition-duration: 0.075s;
             transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -36,34 +35,6 @@
                                 transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
                 }
             }
-
-            /**********************************
-            *****   Self-made-edits      ******
-            ***********************************/
-            .hamburger-box {
-                width: 1.4375em; // 23px/
-            }
-            .hamburger-inner {
-                width: 1.4375em; // 23px/16
-                height: 0.25em; // 4px/16
-                height:3px;
-                background-color: #FFF;
-                
-                &::before, &::after {
-                    width: 1.4375em; // 23px/16
-                    height: 0.1875em; //3px/16
-                    background-color: #FFF;
-                }
-            }
-            border-radius: 50%;
-            border: 2px solid #fff;
-            padding: 0.5625em 0.5625em 0.5em 0.5625em; //9px 9px 8px 9px;
-            background-color: rgba(0,0,0,0.8); //333
-            /*************************************
-            *****   END of Self-made-edits  ******
-            **************************************/
-
-
         } //End of .is-active
     }//End of .hambergur-squeeze
 }//End of @If index

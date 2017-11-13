@@ -161,6 +161,9 @@ header .logo h1 {
     z-index: 1001;
   }
 
+  /*-------------------------------------
+  ---------- SELF-MADE-EDIT -----------
+  -------------------------------------*/
   .change-height {
     top: 0.4375em;
     right: 0.3125em;
@@ -230,10 +233,6 @@ header .logo h1 {
   /*
    * Squeeze
    */
-  .hamburger--squeeze {
-    -webkit-transition: all .3s ease-in, font-size 0.15ms;
-    transition: all .3s ease-in, font-size 0.15ms;
-  }
   .hamburger--squeeze .hamburger-inner {
     -webkit-transition-duration: 0.075s;
             transition-duration: 0.075s;
@@ -249,18 +248,6 @@ header .logo h1 {
     transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-  .hamburger--squeeze.is-active {
-    /**********************************
-    *****   Self-made-edits      ******
-    ***********************************/
-    border-radius: 50%;
-    border: 2px solid #fff;
-    padding: 0.5625em 0.5625em 0.5em 0.5625em;
-    background-color: rgba(0, 0, 0, 0.8);
-    /*************************************
-    *****   END of Self-made-edits  ******
-    **************************************/
   }
   .hamburger--squeeze.is-active .hamburger-inner {
     -webkit-transform: rotate(45deg);
@@ -284,6 +271,19 @@ header .logo h1 {
     transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
     transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
   }
+
+  /*-------------------------------------
+  --- SELF MADE EDIT FOR HAMBURGER-------
+  -------------------------------------*/
+  .hamburger--squeeze.is-active {
+    font-size: 1.6rem;
+    -webkit-transition: all .3s ease-in, font-size 0s;
+    transition: all .3s ease-in, font-size 0s;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    padding: 0.5625em 0.5625em 0.5em 0.5625em;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
   .hamburger--squeeze.is-active .hamburger-box {
     width: 1.4375em;
   }
@@ -299,10 +299,9 @@ header .logo h1 {
     background-color: #FFF;
   }
 
-  .hamburger--squeeze.is-active {
-    font-size: 1.6rem;
-  }
-
+  /***********************************************************
+  ********   SIDEMENU-offCanvas   ****************************
+  ************************************************************/
   /* General styles for all menus */
   .cbp-spmenu {
     background: #47a3da;
@@ -468,5 +467,4 @@ header .logo h1 {
 }
 /* ------ end of media query ------ */
 /*@import "mobilemenu";*/
-
 /*# sourceMappingURL=styles.css.map */

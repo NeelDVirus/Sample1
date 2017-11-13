@@ -13,17 +13,53 @@
     //transition for .nav-button-wrapper.change-height;
 }
 
-//----------   SELF-MADE-CHANGE   -----------------
-//----- position-when-clicked__Hambergur-menu -----
+/*-------------------------------------
+---------- SELF-MADE-EDIT -----------
+-------------------------------------*/
+
+//position-when-clicked__Hambergur-menu
 .change-height {
     top: 0.4375em; // 7px/16
     right: 0.3125em; // 10px/16
 }
 
 
+
 /***********************************************************
 ********   Hamburger icon for open and close menu   ********
 ************************************************************/
+
 @import "hamburgers/hamburgers";
-.hamburger--squeeze.is-active {font-size: 1.6rem;}
+/*-------------------------------------
+--- SELF MADE EDIT FOR HAMBURGER-------
+-------------------------------------*/
+.hamburger--squeeze.is-active {
+    font-size: 1.6rem;    
+    transition: all .3s ease-in, font-size 0s;// padding 0ms;
+    
+    border-radius: 50%;
+    border: 2px solid #fff;
+    padding: 0.5625em 0.5625em 0.5em 0.5625em; //9px 9px 8px 9px;
+    background-color: rgba(0,0,0,0.8); //333
+    .hamburger-box {
+        width: 1.4375em; // 23px/
+    }
+    .hamburger-inner {
+        width: 1.4375em; // 23px/16
+        height: 0.25em; // 4px/16
+        height:3px;
+        background-color: #FFF;
+                
+        &::before, &::after {
+            width: 1.4375em; // 23px/16
+            height: 0.1875em; //3px/16
+            background-color: #FFF;
+        }
+    }
+}
+
+
+/***********************************************************
+********   SIDEMENU-offCanvas   ****************************
+************************************************************/
 @import "sidemenu-offCanvas/sidemenu";
