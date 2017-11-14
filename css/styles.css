@@ -240,14 +240,14 @@ header .logo h1 {
             transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
   .hamburger--squeeze .hamburger-inner::before {
-    -webkit-transition: top 0.075s 0.12s ease;
-    transition: top 0.075s 0.12s ease;
+    -webkit-transition: top 0.175s 0.12s ease;
+    transition: top 0.175s 0.12s ease;
   }
   .hamburger--squeeze .hamburger-inner::after {
-    -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    -webkit-transition: bottom 0.175s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: bottom 0.175s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: bottom 0.175s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: bottom 0.175s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
   .hamburger--squeeze.is-active .hamburger-inner {
     -webkit-transform: rotate(45deg);
@@ -275,10 +275,24 @@ header .logo h1 {
   /*-------------------------------------
   --- SELF MADE EDIT FOR HAMBURGER-------
   -------------------------------------*/
-  .hamburger--squeeze.is-active {
-    font-size: 1.6rem;
+  /*
+  .header-wrapper.unscrolled {
+      font-size: 2rem;
+      background-color: rgba(0,0,0,0);
+      .hamburger--squeeze {
+          .hamburger-inner {
+              &::before {transition: top 0s;}
+              &::after {transition: bottom 0s;}
+          }
+      }
+  }
+  */
+  .hamburger--squeeze {
     -webkit-transition: all .3s ease-in, font-size 0s;
     transition: all .3s ease-in, font-size 0s;
+  }
+  .hamburger--squeeze.is-active {
+    font-size: 1.6rem;
     border-radius: 50%;
     border: 2px solid #fff;
     padding: 0.5625em 0.5625em 0.5em 0.5625em;
@@ -467,4 +481,5 @@ header .logo h1 {
 }
 /* ------ end of media query ------ */
 /*@import "mobilemenu";*/
+
 /*# sourceMappingURL=styles.css.map */

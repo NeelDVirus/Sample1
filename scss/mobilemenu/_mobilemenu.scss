@@ -33,27 +33,42 @@
 /*-------------------------------------
 --- SELF MADE EDIT FOR HAMBURGER-------
 -------------------------------------*/
-.hamburger--squeeze.is-active {
-    font-size: 1.6rem;    
-    transition: all .3s ease-in, font-size 0s;// padding 0ms;
-    
-    border-radius: 50%;
-    border: 2px solid #fff;
-    padding: 0.5625em 0.5625em 0.5em 0.5625em; //9px 9px 8px 9px;
-    background-color: rgba(0,0,0,0.8); //333
-    .hamburger-box {
-        width: 1.4375em; // 23px/
+/*
+.header-wrapper.unscrolled {
+    font-size: 2rem;
+    background-color: rgba(0,0,0,0);
+    .hamburger--squeeze {
+        .hamburger-inner {
+            &::before {transition: top 0s;}
+            &::after {transition: bottom 0s;}
+        }
     }
-    .hamburger-inner {
-        width: 1.4375em; // 23px/16
-        height: 0.25em; // 4px/16
-        height:3px;
-        background-color: #FFF;
-                
-        &::before, &::after {
+}
+*/
+
+.hamburger--squeeze {
+    transition: all .3s ease-in, font-size 0s;// padding 0ms;
+    &.is-active {
+        font-size: 1.6rem;
+        
+        border-radius: 50%;
+        border: 2px solid #fff;
+        padding: 0.5625em 0.5625em 0.5em 0.5625em; //9px 9px 8px 9px;
+        background-color: rgba(0,0,0,0.8); //333
+        .hamburger-box {
+            width: 1.4375em; // 23px/
+        }
+        .hamburger-inner {
             width: 1.4375em; // 23px/16
-            height: 0.1875em; //3px/16
+            height: 0.25em; // 4px/16
+            height:3px;
             background-color: #FFF;
+                    
+            &::before, &::after {
+                width: 1.4375em; // 23px/16
+                height: 0.1875em; //3px/16
+                background-color: #FFF;
+            }
         }
     }
 }
