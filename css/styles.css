@@ -275,18 +275,23 @@ header .logo h1 {
   /*-------------------------------------
   --- SELF MADE EDIT FOR HAMBURGER-------
   -------------------------------------*/
-  /*
   .header-wrapper.unscrolled {
-      font-size: 2rem;
-      background-color: rgba(0,0,0,0);
-      .hamburger--squeeze {
-          .hamburger-inner {
-              &::before {transition: top 0s;}
-              &::after {transition: bottom 0s;}
-          }
-      }
+    font-size: 2rem;
+    background-color: transparent;
   }
-  */
+  .header-wrapper.unscrolled .hamburger--squeeze {
+    -webkit-transition: padding 0s;
+    transition: padding 0s;
+  }
+  .header-wrapper.unscrolled .hamburger--squeeze .hamburger-inner::before {
+    -webkit-transition: top 0s;
+    transition: top 0s;
+  }
+  .header-wrapper.unscrolled .hamburger--squeeze .hamburger-inner::after {
+    -webkit-transition: bottom 0s;
+    transition: bottom 0s;
+  }
+
   .hamburger--squeeze {
     -webkit-transition: all .3s ease-in, font-size 0s;
     transition: all .3s ease-in, font-size 0s;
