@@ -1,19 +1,30 @@
+
+var t = {}; //to store the timeoutID
 $(document).ready(function(){
 
 
 /*------------------------------------------------
 --- PAGE-SCROLLING EFFECT ON HEADER COMPONENT -----
 ------------------------------------------------*/
+    
 
     var $headerComponent = $(".header-wrapper");
     $(window).on("scroll", function(){
         var displacementFromTop = window.pageYOffset || document.documentElement.scrollTop;
         if (displacementFromTop > 0) {
-            $headerComponent.removeClass("unscrolled");
+            t = window.setTimeout(removeClass, 300);
+            window.clearTimeout(t);
+            t = undefined;
         } else {
             $headerComponent.addClass("unscrolled");
         } 
     });
+
+    //helper function
+    function removeClass() {
+        $headerComponent.removeClass("unscrolled");
+    }
+
 
 /*------------------------------------------------
 ----------   HAMBURGER-ICON    ----------
@@ -32,7 +43,4 @@ $(document).ready(function(){
     $showLeft.on("click", function(e){
         $menuLeft.toggleClass("cbp-spmenu-open");
     });
-
-
-
 });

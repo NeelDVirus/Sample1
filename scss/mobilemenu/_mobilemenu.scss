@@ -38,7 +38,7 @@
     font-size: 2rem;
     background-color: rgba(0,0,0,0);     
     .hamburger--squeeze {
-        transition: padding 0s;        
+        transition: all 0s;        
         .hamburger-inner {
             &::before {transition: top 0s;}
             &::after {transition: bottom 0s;}

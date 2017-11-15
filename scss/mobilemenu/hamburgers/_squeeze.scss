@@ -8,11 +8,11 @@
             transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 
             &::before {
-                transition: top 0.175s 0.12s ease;
+                transition: top 0.075s 0.12s ease;
             }
 
             &::after {
-                transition: bottom 0.175s 0.12s ease,
+                transition: bottom 0.075s 0.12s ease,
                             transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
             }
         }//end of .hamburger-inner
