@@ -1,6 +1,3 @@
-//This partial-scss file is being imported in _phone-default
-
-
 .nav-button-wrapper {
     font-size: 1em; //16px; relative to header-compnent
     //transition: all .3s ease-in;
@@ -13,9 +10,9 @@
     //transition for .nav-button-wrapper.change-height;
 }
 
-/*-------------------------------------
----------- SELF-MADE-EDIT -----------
--------------------------------------*/
+/*-----------------------------------------
+------ SELF MADE EDIT FOR HAMBURGER -------
+-------------------------------------------*/
 
 //position-when-clicked__Hambergur-menu
 .change-height {
@@ -25,27 +22,29 @@
 
 
 
-/***********************************************************
-********   Hamburger icon for open and close menu   ********
-************************************************************/
+/********************************************************
+******   Hamburger icon for main-navigation   ***********
+*********************************************************/
 
 @import "hamburgers/hamburgers";
-/*-------------------------------------
---- SELF MADE EDIT FOR HAMBURGER-------
--------------------------------------*/
+
+/*-----------------------------------------
+------ SELF MADE EDIT FOR HAMBURGER -------
+-------------------------------------------*/
 
 .header-wrapper.unscrolled {
     font-size: 2rem;
-    background-color: rgba(0,0,0,0);     
-    .hamburger--squeeze {
-        transition: all 0s;        
-        .hamburger-inner {
-            &::before {transition: top 0s;}
-            &::after {transition: bottom 0s;}
-        }
-    }
+    background-color: rgba(0,0,0,0);
 }
 
+//new-transition-rules overriding the native-hamurger-transition-rules during the transition of page-header when onScroll event is triggered      
+.hamburger--squeeze.duringScroll-hamburger {
+    transition: all 0s;
+    .hamburger-inner {
+        &::before {transition: top 0s;}
+        &::after {transition: bottom 0s;}
+    }
+}
 
 .hamburger--squeeze {
     transition: all .3s ease-in, font-size 0s;// padding 0ms;
@@ -75,7 +74,7 @@
 }   
 
 
-/***********************************************************
-********   SIDEMENU-offCanvas   ****************************
-************************************************************/
+/*****************************************************
+*********   SIDEMENU-offCanvas   *********************
+*****************************************************/
 @import "sidemenu-offCanvas/sidemenu";

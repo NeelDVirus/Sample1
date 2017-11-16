@@ -46,14 +46,18 @@ body {
     background-color: #000;
     width: 100%;
     min-height: 54px; //match the height of the hamburger-icon
-    transition: all .3s ease-out;
+    
+    // .unscrolled class for scrolling effect on header component
+    &.unscrolled {
+        font-size: 2rem;
+        background-color: rgba(0,0,0,0);
+    }
+    //during the scroll event 
+    &.duringScroll-header {
+        transition: all .3s ease-out;   
+    }
 }
 
-// .unscrolled class for scrolling effect on header component
-.header-wrapper.unscrolled {
-    font-size: 2rem;
-    background-color: rgba(0,0,0,0);
-}
 
 header {
     padding: 1px; //prevention: margin-collapsing

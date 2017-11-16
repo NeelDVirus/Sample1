@@ -123,13 +123,14 @@ body {
   background-color: #000;
   width: 100%;
   min-height: 54px;
-  -webkit-transition: all .3s ease-out;
-  transition: all .3s ease-out;
 }
-
 .header-wrapper.unscrolled {
   font-size: 2rem;
   background-color: transparent;
+}
+.header-wrapper.duringScroll-header {
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
 }
 
 header {
@@ -161,17 +162,17 @@ header .logo h1 {
     z-index: 1001;
   }
 
-  /*-------------------------------------
-  ---------- SELF-MADE-EDIT -----------
-  -------------------------------------*/
+  /*-----------------------------------------
+  ------ SELF MADE EDIT FOR HAMBURGER -------
+  -------------------------------------------*/
   .change-height {
     top: 0.4375em;
     right: 0.3125em;
   }
 
-  /***********************************************************
-  ********   Hamburger icon for open and close menu   ********
-  ************************************************************/
+  /********************************************************
+  ******   Hamburger icon for main-navigation   ***********
+  *********************************************************/
   /*!
    * Hamburgers
    * @description Tasty CSS-animated hamburgers
@@ -240,14 +241,14 @@ header .logo h1 {
             transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
   .hamburger--squeeze .hamburger-inner::before {
-    -webkit-transition: top 0.075s 0.12s ease;
-    transition: top 0.075s 0.12s ease;
+    -webkit-transition: top 0.275s 0.12s ease;
+    transition: top 0.275s 0.12s ease;
   }
   .hamburger--squeeze .hamburger-inner::after {
-    -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    -webkit-transition: bottom 0.275s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: bottom 0.275s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: bottom 0.275s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: bottom 0.275s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
   .hamburger--squeeze.is-active .hamburger-inner {
     -webkit-transform: rotate(45deg);
@@ -272,22 +273,23 @@ header .logo h1 {
     transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 
-  /*-------------------------------------
-  --- SELF MADE EDIT FOR HAMBURGER-------
-  -------------------------------------*/
+  /*-----------------------------------------
+  ------ SELF MADE EDIT FOR HAMBURGER -------
+  -------------------------------------------*/
   .header-wrapper.unscrolled {
     font-size: 2rem;
     background-color: transparent;
   }
-  .header-wrapper.unscrolled .hamburger--squeeze {
+
+  .hamburger--squeeze.duringScroll-hamburger {
     -webkit-transition: all 0s;
     transition: all 0s;
   }
-  .header-wrapper.unscrolled .hamburger--squeeze .hamburger-inner::before {
+  .hamburger--squeeze.duringScroll-hamburger .hamburger-inner::before {
     -webkit-transition: top 0s;
     transition: top 0s;
   }
-  .header-wrapper.unscrolled .hamburger--squeeze .hamburger-inner::after {
+  .hamburger--squeeze.duringScroll-hamburger .hamburger-inner::after {
     -webkit-transition: bottom 0s;
     transition: bottom 0s;
   }
@@ -318,9 +320,9 @@ header .logo h1 {
     background-color: #FFF;
   }
 
-  /***********************************************************
-  ********   SIDEMENU-offCanvas   ****************************
-  ************************************************************/
+  /*****************************************************
+  *********   SIDEMENU-offCanvas   *********************
+  *****************************************************/
   /* General styles for all menus */
   .cbp-spmenu {
     background: #47a3da;

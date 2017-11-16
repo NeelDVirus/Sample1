@@ -1,31 +1,49 @@
 
-var t = {}; //to store the timeoutID
 $(document).ready(function(){
-
-
 /*------------------------------------------------
 --- PAGE-SCROLLING EFFECT ON HEADER COMPONENT -----
 ------------------------------------------------*/
     
+    var scrolling = {
+        $headerComponent : $(".header-wrapper"),
 
-    var $headerComponent = $(".header-wrapper");
-    $(window).on("scroll", function(){
-        var displacementFromTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (displacementFromTop > 0) {
-            t = window.setTimeout(removeClass, 300);
-            window.clearTimeout(t);
-            t = undefined;
-        } else {
-            $headerComponent.addClass("unscrolled");
-        } 
-    });
-
-    //helper function
-    function removeClass() {
-        $headerComponent.removeClass("unscrolled");
+        //helper functions
+        funcInEvent1: function() {
+            scrolling.$headerComponent.removeClass("duringScroll-header");
+            scrolling.$navButton.removeClass("duringScroll-hamburger");
+        },
+        funcPreEvent1: function(){
+            scrolling.$navButton.removeClass("duringScroll-hamburger");
+        }
+    };
+    //scrolling.$headerComponent = $(".header-wrapper");
+    scrolling.$navButton = scrolling.$headerComponent.find(".nav-button.hamburger");
+    scrolling.$previousPositionY = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrolling.$previousPositionY) {            
+            scrolling.$headerComponent.removeClass("unscrolled");
+            scrolling.$navButton.addClass("duringScroll-hamburger");
+            window.setTimeout(scrolling.funcPreEvent1, 400);
     }
 
+    $(window).on("scroll", function(){
+        scrolling.$presentPositionY = window.pageYOffset || document.documentElement.scrollTop;
 
+        if (!scrolling.$previousPositionY && scrolling.$presentPositionY) {            
+            scrolling.$headerComponent.removeClass("unscrolled").addClass("duringScroll-header");
+            scrolling.$navButton.addClass("duringScroll-hamburger");
+            window.setTimeout(scrolling.funcInEvent1, 300);
+        } else if (scrolling.$previousPositionY && !scrolling.$presentPositionY)  {
+            scrolling.$headerComponent.addClass("unscrolled duringScroll-header");
+            scrolling.$navButton.addClass("duringScroll-hamburger");
+            window.setTimeout(scrolling.funcInEvent1, 300);
+        } 
+
+        scrolling.$previousPositionY = scrolling.$presentPositionY;        
+    });
+
+
+
+    
 /*------------------------------------------------
 ----------   HAMBURGER-ICON    ----------
 ------------------------------------------------*/
@@ -44,3 +62,8 @@ $(document).ready(function(){
         $menuLeft.toggleClass("cbp-spmenu-open");
     });
 });
+
+
+
+/*i am stuck with the logic. 
+in the scroll event i want the setTimeout method of excute when the condition is (the scroll position previously was `0` and then the present scroll position is not `0`)*/
