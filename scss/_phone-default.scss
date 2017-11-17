@@ -77,8 +77,8 @@ header {
 }
 
 //----- MOBILE MENU FEATURE ---------
-
-@media only screen and (max-width: 47.9375em) { 
+//$lgbp = 62em
+@media only screen and (max-width: 62em) { 
     @import "mobilemenu/mobilemenu";
 }
 

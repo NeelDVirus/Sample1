@@ -7,10 +7,55 @@
 *********    Header And Navigation    *****************
 ******************************************************/
 
+.header-wrapper {
+    min-height: 0;
+    font-size: 1.6rem;
+    
+    header {
+    //removing phone-effect
+    .nav-button {
+        display: none;
+    }
+}
+}
+
 
 //------------ Navbar section-----------
 
-
+.nav-wrapper {        
+    font-size: 0.875em; // relative to .header-wrapeer--> 14px
+    position: absolute; //.header-wrapper has position: fixed
+    top: 50%;
+    right: $gutter;
+    transform: translate(0, -50%);
+}
+.nav-main {
+    font-family: $lato;
+    font-weight: $normal-lato;
+    
+    .heading {
+        display: none;
+    }
+    ul {
+        //display: block;          
+        li {
+            display: inline-block;
+            padding: 0 0.7em;
+            border-right: 1px solid darken(#fff, 70%);
+            
+            &:last-child {
+                border-right: none;
+            }
+            a {
+                display: inline-block;
+                color: #fff;
+                text-decoration: none;
+                text-transform: uppercase;
+                padding: .3em;
+            }
+        }
+    }
+} //end of .nav-main
 
 
 

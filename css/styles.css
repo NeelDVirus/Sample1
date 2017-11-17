@@ -150,7 +150,7 @@ header .logo h1 {
   display: none;
 }
 
-@media only screen and (max-width: 47.9375em) {
+@media only screen and (max-width: 62em) {
   .nav-button-wrapper {
     font-size: 1em;
   }
@@ -444,7 +444,17 @@ header .logo h1 {
   /*-----------------------------------------------------
   ---------    Header And Navigation    -----------------
   -----------------------------------------------------*/
-  header .nav-button {
+}
+/* -----end of media querry--- */
+@media only screen and (min-width: 62em) {
+  /******************************************************
+  *********    Header And Navigation    *****************
+  ******************************************************/
+  .header-wrapper {
+    min-height: 0;
+    font-size: 1.6rem;
+  }
+  .header-wrapper header .nav-button {
     display: none;
   }
 
@@ -480,13 +490,6 @@ header .logo h1 {
     padding: .3em;
   }
 }
-/* -----end of media querry--- */
-@media only screen and (min-width: 62em) {
-  /******************************************************
-  *********    Header And Navigation    *****************
-  ******************************************************/
-}
 /* ------ end of media query ------ */
 /*@import "mobilemenu";*/
-
 /*# sourceMappingURL=styles.css.map */
