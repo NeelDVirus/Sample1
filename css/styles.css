@@ -400,6 +400,7 @@ header .logo h1 {
   background-image: url("../images/banner/01mobile/banner360-640.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 1.125), only screen and (min-resolution: 108dpi) {
@@ -420,6 +421,7 @@ header .logo h1 {
 @media only screen and (min-width: 75em) {
   .banner {
     background-image: url("../images/banner/03desktop/banner1366-768.jpg");
+    background-attachment: fixed;
   }
 }
 @media only screen and (min-width: 83.96em) {

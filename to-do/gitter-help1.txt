@@ -1,0 +1,11 @@
+Blaueff--->
+
+@NeelDVirus You could also do something like window.setTimeout(scrolling.funcInEvent1.bind(scrolling), 300);, this will bind the passed function's this to be the current value of scrolling.
+
+@NeelDVirus setTimeout will call your function with undefined as this, which is replaced by window, the global object. The scrolling context is only preserved if you call it like scrolling.funcInEvent1()
+
+bind always binds the this, and also can do partial application. I once wanted partial application without binding this, had to write my own functionccdd .
+
+
+
+

@@ -8,3 +8,6 @@
 2. swtich to the 92ppi/dpi from 72ppi/dpi
 
 3. is the media query for back-ground images approach correct in _banner.scss
+4. banner-background-image in tablet view (large screen size, not extra-large)
+
+5. in js file's "PAGE-SCROLLING EFFECT ON HEADER COMPONENT" section, encapsulate every variable in object
