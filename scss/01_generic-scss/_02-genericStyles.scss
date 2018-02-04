@@ -1,0 +1,99 @@
+
+/*-----------------------------------------------------
+---------    0- Body and its complement     -----------
+-----------------------------------------------------*/
+body {
+    //font-size: 16px;
+    font-family: $openSans;
+    font-weight: $normal-openSans; /*300 for normal, 600 for bold*/
+}
+
+#pageWrapper, main {height: 100%;}
+
+/*-----------------------------------------------------
+---------    1. rows and columns     -----------
+-----------------------------------------------------*/
+.row{
+    clear: both;
+    &:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.col {
+    padding: 0 $gutter;
+}
+
+.col_xl-2, .col_xs-3, .col_xs-4, .col_xs-6, .col_xs-8 {
+    float: left;
+}
+.col_xl-2 {
+    width: 16.666%;
+}
+.col_xs-3 {
+    width: 25%;
+}
+.col_xs-4 {
+    width: 33.33%;
+}
+.col_xs-6 {
+    width: 50%;
+}
+.col_xs-8 {
+    width: 66.6667%;
+}
+.col-xs-9 {
+    width: 75%;
+}
+
+@media only screen and (min-width: 48em) {
+    
+}
+@media only screen and (min-width: 62em) {
+    
+}
+@media only screen and (min-width: 75em) {
+    
+    .col_xl-2, .col_xl-3, .col_xl-4, .col_xl-6, .col_xl-8 {
+        float: left;
+    }
+    .col_xl-2 {
+        width: 16.666%;
+    }
+    .col_xl-3 {
+        width: 25%;
+    }
+    .col_xl-4 {
+        width: 33.333%;
+    }
+    .col_xl-5 {
+        width: 41.6667%;
+    }
+    .col_xl-6 {
+        width: 50%;
+    }
+    .col_xl-8 {
+        width: 66.6667%;
+    }
+    .col-xl-9 {
+        width: 75%;
+    }
+
+}
+
+
+/*-----------------------------------------------------
+---------    00- miscellaneous     -----------
+-----------------------------------------------------*/
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*-----------------------------------------------------
+---------    to be organised     -----------
+-----------------------------------------------------*/

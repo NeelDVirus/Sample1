@@ -1,4 +1,4 @@
-<!doctype html>
+ <!doctype html>
 <html>
 <head>
     <meta charset="utf-8">    
@@ -30,20 +30,28 @@
 <body>
 
 
+    
+
+
+
+<div id="pageWrapper">
 <!--***************************************
 *******     HEADER-WRAPPER   **************
 *****************************************-->
-<div class="header-wrapper unscrolled">
-<header class="header row clearfix">
+<div class="row header-wrapper unscrolled">
+<header class="col header clearfix">
+
+
     <!-- Component_Logo -->
     <div class="logo">
         LOGO
         <h1>Company name</h1>
     </div>
 
+
     <!-- Component__navigation -->
-    <div class="nav-wrapper">
-    <nav class="nav-main cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+    <div class="row nav-wrapper">
+    <nav class="nav-main cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2"><!-- dont put "col" class in the "nav" element because there happens some unwanted consequences of animation  -->
         <h2 class="heading">Menu</h2>
         <ul>
             <li><a href="#">Home</a></li>
@@ -56,6 +64,7 @@
     </nav>
     </div> <!-- End__nav-wrapper -->  
     
+
     <!-- Component_Button -->
     <div class="nav-button-wrapper">
     <button class="nav-button hamburger hamburger--squeeze" id="showRight" type="button">
@@ -64,21 +73,67 @@
         </span>
     </button> 
     </div> <!-- End_ button-wrapper -->
-</header>
-</div>
-<!-- End___HEADER-WRAPPER -->
 
 
+</header> <!-- end-col -->
+</div> <!-- end-row -->
+
+
+
+<main>
 <!--****************************************
 ************   BANNER-WRAPPER  *************
 ********************************************-->
-<div class="banner-wrapper">
+<div class="bannerWrapper">
 <section class="banner">
-<div class="">
+<div class="roughDiv-bannerImgDarkening"><!-- rough-div_for_darkening-the-banner  -->
+
+    <div class="row main-board">
+
+        <div class="col col_xl-6 banner_content">
+            <div class="container">
+                <p>HEADING HEADING HEADING HEADING</p>
+            </div>
+            <div class="">
+                <p>We optimize</p>
+                <p>We leverage</p>
+            </div>
+        </div><!-- end of col -->
         
-</div>        
+        <!-- Banner_content-image -->
+        <div class="col col_xl-6 banner_content-image">         
+            <figure><img src="images/banner/bannerContentImage.png" alt="website images"></figure>
+        </div><!-- end of col -->
+    </div><!-- end of row -->
+
+    <div class="row social-icons">
+        <div class="col col_xl-6">
+            <ul class="container social">
+                <li class="twitter"><a href=""></a></li>
+                <li class="facebook"><a href=""></a></li>
+                <li class="youtube"><a href=""></a></li>
+                <li class="linkedin"><a href=""></a></li>
+            </ul>
+        </div><!-- end of col -->
+    </div><!-- end of row -->
+
+    <!-- SCROLL-ICON__POSITION: ABSOLUTION -->
+    <div class="scrollIcon-container">
+        <span>scrollIcon</span>
+    </div>
+
+</div> <!-- rough-div_for_darkening-the-banner  -->
 </section>
-</div>
+</div> <!-- end of .bannerWrapper -->
+
+
+
+
+
+
+
+
+
 
 <div>rough</div>
 <div>rough</div>
@@ -123,6 +178,12 @@
 <div>rough</div>
 <div>rough</div>
 <div>rough</div>
+
+
+
+</main>
+
+</div> <!-- end of #pageWrapper -->
 
 </body>
 </html>

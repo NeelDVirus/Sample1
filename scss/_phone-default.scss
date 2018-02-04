@@ -1,44 +1,12 @@
-/*-----Prevents iPhone from resizing in landscape mode ------*/
-html {
-	-ms-text-size-adjust: 100%;
-	-moz-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-}
-/*-----Generilized styles ------*/
-* {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-body {
-	//font-size: 16px;
-    font-family: $openSans;
-	font-weight: $normal-openSans; /*300 for normal, 600 for bold*/
-}
-
 /*
     CONTENT
-    1. self-generalized styles
-    2. Header
-    00. Miscellaneous
+        1. Header
+        2. Banner
+        00. Miscellaneous
 */
 
-
 /*-----------------------------------------------------
----------    1. self generalized styles     -----------
------------------------------------------------------*/
-.row {
-    margin: 0 $gutter;
-}
-
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/*-----------------------------------------------------
------------------   2. HEADER     ---------------------
+-----------------   1. HEADER     ---------------------
 -----------------------------------------------------*/
 .header-wrapper {
     font-size: 1.6rem;
@@ -56,6 +24,7 @@ body {
     &.duringScroll-header {
         transition: all .3s ease-out;   
     }
+    z-index: 99;
 }
 
 
@@ -86,14 +55,94 @@ header {
 /*-----------------------------------------------------
 --------------      2. Banner        ------------------
 -------------------------------------------------------*/
-@import "banner/banner";
+@import "banner/banner-image";
+        
+.banner-wrapper {
+    font-size: 1.6rem;
+    
+}
+
+
+.banner {
+    position: relative;
+    color: #fff;    
+    
+    .roughDiv-bannerImgDarkening {        
+        padding-top: 110px;
+    }
+
+    //--------------- .row.main-board --------------------------    
+    .banner_content {
+        
+    }
+    .banner_content-image figure {
+        position: relative;
+        height: 400px;
+        //background-color: rgba(255,255,255,0.2);
+        img {
+            height: 100%;
+            width: 95%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+    
+    //------------------ .row.social-icons ------------------
+    .row.social-icons .col {
+        float: right;
+    }
+    ul.social {
+        width: 70%;
+        margin: 0 auto;
+                
+        li {
+            width: 25%;
+            float:left;
+            
+            a {
+                display: block;
+                background-image: url(../images/social-icon/socialSprites.png);
+                height: 45px;
+                width: 45px;
+                margin: 0 auto;
+            }// a
+        }
+    }
+    ul.social {
+        .twitter a {background-position: -90px -45px;}
+        .facebook a {background-position: -45px -45px;}
+        .linkedin a {background-position: 0 -45px;}
+        .youtube a {background-position: -225px -45px;}
+
+        a {transition: background-position 0.15s ease-out;}
+
+        .twitter a:hover {background-position: -90px 0;}
+        .facebook a:hover {background-position: -45px 0px;}
+        .linkedin a:hover {background-position: 0 0px;}
+        .youtube a:hover {background-position: -225px 0px;}
+    }
+    
+    .scrollIcon-container {
+        width: 100%;
+        position: absolute;
+        bottom: 2%;
+        text-align: center;
+        span {
+            display: inline-block;
+            padding: 5px;
+            border: 2px solid #fff;
+        }
+    }
+    
+}// .banner
 
 
 
 
 
 
-
-/*-----------------------------------------------------
+/* -----------------------------------------------------
 -----------------   00 Miscellaneous  -----------------
--------------------------------------------------------*/
+------------------------------------------------------- */

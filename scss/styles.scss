@@ -1,10 +1,12 @@
-@import "intrinsic-scss/reset";
-@import "intrinsic-scss/genericStyles";
-@import "intrinsic-scss/variables";
-@import "intrinsic-scss/mixins";
+@import "00_intrinsic-scss/00-reset";
+@import "00_intrinsic-scss/01-normalize-selfMade";
+
+@import "01_generic-scss/00-variables";
+@import "01_generic-scss/01-mixins";
+@import "01_generic-scss/02-genericStyles.scss";
+
 @import "phone-default";
 @import "phone-landscape";
 @import "tablet";
 @import "desktop";
 @import "large-desktop";
-/*@import "mobilemenu";*/

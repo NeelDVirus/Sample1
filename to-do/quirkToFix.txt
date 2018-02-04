@@ -11,3 +11,5 @@
 4. banner-background-image in tablet view (large screen size, not extra-large)
 
 5. in js file's "PAGE-SCROLLING EFFECT ON HEADER COMPONENT" section, encapsulate every variable in object
+
+6. implement picturefill.js 

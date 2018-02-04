@@ -52,9 +52,20 @@ table {
   border-spacing: 0;
 }
 
+/*-----------------------------------------------------
+---------    Priority: Ultra    -----------
+-----------------------------------------------------*/
 html {
   font-size: 62.5%;
   height: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -76,38 +87,99 @@ a {
 /***********************************************  
 ***********   For media queries    *************
 ************************************************/
-/*-----Prevents iPhone from resizing in landscape mode ------*/
-html {
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-/*-----Generilized styles ------*/
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
+/*-----------------------------------------------------
+---------    0- Body and its complement     -----------
+-----------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   /*300 for normal, 600 for bold*/
 }
 
-/*
-    CONTENT
-    1. self-generalized styles
-    2. Header
-    00. Miscellaneous
-*/
-/*-----------------------------------------------------
----------    1. self generalized styles     -----------
------------------------------------------------------*/
-.row {
-  margin: 0 2%;
+#pageWrapper, main {
+  height: 100%;
 }
 
+/*-----------------------------------------------------
+---------    1. rows and columns     -----------
+-----------------------------------------------------*/
+.row {
+  clear: both;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col {
+  padding: 0 2%;
+}
+
+.col_xl-2, .col_xs-3, .col_xs-4, .col_xs-6, .col_xs-8 {
+  float: left;
+}
+
+.col_xl-2 {
+  width: 16.666%;
+}
+
+.col_xs-3 {
+  width: 25%;
+}
+
+.col_xs-4 {
+  width: 33.33%;
+}
+
+.col_xs-6 {
+  width: 50%;
+}
+
+.col_xs-8 {
+  width: 66.6667%;
+}
+
+.col-xs-9 {
+  width: 75%;
+}
+
+@media only screen and (min-width: 75em) {
+  .col_xl-2, .col_xl-3, .col_xl-4, .col_xl-6, .col_xl-8 {
+    float: left;
+  }
+
+  .col_xl-2 {
+    width: 16.666%;
+  }
+
+  .col_xl-3 {
+    width: 25%;
+  }
+
+  .col_xl-4 {
+    width: 33.333%;
+  }
+
+  .col_xl-5 {
+    width: 41.6667%;
+  }
+
+  .col_xl-6 {
+    width: 50%;
+  }
+
+  .col_xl-8 {
+    width: 66.6667%;
+  }
+
+  .col-xl-9 {
+    width: 75%;
+  }
+}
+/*-----------------------------------------------------
+---------    00- miscellaneous     -----------
+-----------------------------------------------------*/
 .clearfix:after {
   content: "";
   display: table;
@@ -115,7 +187,16 @@ body {
 }
 
 /*-----------------------------------------------------
------------------   2. HEADER     ---------------------
+---------    to be organised     -----------
+-----------------------------------------------------*/
+/*
+    CONTENT
+        1. Header
+        2. Banner
+        00. Miscellaneous
+*/
+/*-----------------------------------------------------
+-----------------   1. HEADER     ---------------------
 -----------------------------------------------------*/
 .header-wrapper {
   font-size: 1.6rem;
@@ -123,10 +204,11 @@ body {
   background-color: #000;
   width: 100%;
   min-height: 54px;
+  z-index: 99;
 }
 .header-wrapper.unscrolled {
   font-size: 2rem;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
 }
 .header-wrapper.duringScroll-header {
   -webkit-transition: all .3s ease-out;
@@ -278,7 +360,7 @@ header .logo h1 {
   -------------------------------------------*/
   .header-wrapper.unscrolled {
     font-size: 2rem;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0);
   }
 
   .hamburger--squeeze.duringScroll-hamburger {
@@ -389,7 +471,7 @@ header .logo h1 {
 /*-----------------------------------------------------
 --------------      2. Banner        ------------------
 -------------------------------------------------------*/
-.banner-wrapper {
+.bannerWrapper {
   height: 100%;
   font-size: 1.6rem;
 }
@@ -401,6 +483,10 @@ header .logo h1 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+.banner .roughDiv-bannerImgDarkening {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 1.125), only screen and (min-resolution: 108dpi) {
@@ -434,9 +520,91 @@ header .logo h1 {
     background-image: url("../images/banner/03desktop/banner1920-1080.jpg");
   }
 }
-/*-----------------------------------------------------
+.banner-wrapper {
+  font-size: 1.6rem;
+}
+
+.banner {
+  position: relative;
+  color: #fff;
+}
+.banner .roughDiv-bannerImgDarkening {
+  padding-top: 110px;
+}
+.banner .banner_content-image figure {
+  position: relative;
+  height: 400px;
+}
+.banner .banner_content-image figure img {
+  height: 100%;
+  width: 95%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.banner .row.social-icons .col {
+  float: right;
+}
+.banner ul.social {
+  width: 70%;
+  margin: 0 auto;
+}
+.banner ul.social li {
+  width: 25%;
+  float: left;
+}
+.banner ul.social li a {
+  display: block;
+  background-image: url(../images/social-icon/socialSprites.png);
+  height: 45px;
+  width: 45px;
+  margin: 0 auto;
+}
+.banner ul.social .twitter a {
+  background-position: -90px -45px;
+}
+.banner ul.social .facebook a {
+  background-position: -45px -45px;
+}
+.banner ul.social .linkedin a {
+  background-position: 0 -45px;
+}
+.banner ul.social .youtube a {
+  background-position: -225px -45px;
+}
+.banner ul.social a {
+  -webkit-transition: background-position 0.15s ease-out;
+  transition: background-position 0.15s ease-out;
+}
+.banner ul.social .twitter a:hover {
+  background-position: -90px 0;
+}
+.banner ul.social .facebook a:hover {
+  background-position: -45px 0px;
+}
+.banner ul.social .linkedin a:hover {
+  background-position: 0 0px;
+}
+.banner ul.social .youtube a:hover {
+  background-position: -225px 0px;
+}
+.banner .scrollIcon-container {
+  width: 100%;
+  position: absolute;
+  bottom: 2%;
+  text-align: center;
+}
+.banner .scrollIcon-container span {
+  display: inline-block;
+  padding: 5px;
+  border: 2px solid #fff;
+}
+
+/* -----------------------------------------------------
 -----------------   00 Miscellaneous  -----------------
--------------------------------------------------------*/
+------------------------------------------------------- */
 @media only screen and (min-width: 48em) {
   /**********************************
       CONTENT
@@ -493,5 +661,5 @@ header .logo h1 {
   }
 }
 /* ------ end of media query ------ */
-/*@import "mobilemenu";*/
+
 /*# sourceMappingURL=styles.css.map */

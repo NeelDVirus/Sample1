@@ -1,5 +1,5 @@
 
-.banner-wrapper {
+.bannerWrapper {
     height: 100%; 
     font-size: 1.6rem; //16px
 }
@@ -11,6 +11,10 @@
     background-size: cover; //use cover to maintain the aspect ratio
     background-position: center;
     background-repeat: no-repeat;
+    .roughDiv-bannerImgDarkening {
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+    }
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio : 1.5),
