@@ -5,7 +5,7 @@
 body {
     //font-size: 16px;
     font-family: $openSans;
-    font-weight: $normal-openSans; /*300 for normal, 600 for bold*/
+    font-weight: $light-openSans; /*300 for normal, 600 for bold*/
 }
 
 #pageWrapper, main {height: 100%;}
@@ -56,7 +56,7 @@ body {
 }
 @media only screen and (min-width: 75em) {
     
-    .col_xl-2, .col_xl-3, .col_xl-4, .col_xl-6, .col_xl-8 {
+    .col_xl-2, .col_xl-3, .col_xl-4, .col_xl-5, .col_xl-6, .col_xl-7, .col_xl-8 {
         float: left;
     }
     .col_xl-2 {
@@ -73,6 +73,9 @@ body {
     }
     .col_xl-6 {
         width: 50%;
+    }
+    .col_xl-7 {
+        width: 58.3333%;
     }
     .col_xl-8 {
         width: 66.6667%;

@@ -64,7 +64,7 @@ header {
 
 
 .banner {
-    position: relative;
+    //position: relative;
     color: #fff;    
     
     .roughDiv-bannerImgDarkening {        
@@ -73,8 +73,38 @@ header {
 
     //--------------- .row.main-board --------------------------    
     .banner_content {
-        
+        /*position: relative;
+        .roughForPosition {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }*/
+        .heading1, .heading2 {            
+            font-weight: $regular-openSans;
+            color: #fff;
+            letter-spacing: 2px;
+            font-size: 1.3em;
+            text-align: center;            
+            text-transform: uppercase;
+        }
+        .heading2 {
+            line-height: 1.8;
+        }
+        .buttons {
+            margin-top: 2em;
+            text-align: center;
+        }
+        .buttons a {
+            margin-right: 20px;            
+            font-size: 0.9em;
+            text-transform: uppercase;
+            line-height: 32px;
+            padding: 15px 30px;
+            border: 1px solid rgba(255,255,255,0.15)
+        }
     }
+
     .banner_content-image figure {
         position: relative;
         height: 400px;
@@ -94,7 +124,7 @@ header {
         float: right;
     }
     ul.social {
-        width: 70%;
+        width: 60%;
         margin: 0 auto;
                 
         li {

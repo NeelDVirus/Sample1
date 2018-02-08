@@ -76,6 +76,7 @@ body {
 a {
   display: inline-block;
   text-decoration: none;
+  color: inherit;
 }
 
 /***********************************************  
@@ -145,7 +146,7 @@ body {
 }
 
 @media only screen and (min-width: 75em) {
-  .col_xl-2, .col_xl-3, .col_xl-4, .col_xl-6, .col_xl-8 {
+  .col_xl-2, .col_xl-3, .col_xl-4, .col_xl-5, .col_xl-6, .col_xl-7, .col_xl-8 {
     float: left;
   }
 
@@ -167,6 +168,10 @@ body {
 
   .col_xl-6 {
     width: 50%;
+  }
+
+  .col_xl-7 {
+    width: 58.3333%;
   }
 
   .col_xl-8 {
@@ -486,7 +491,7 @@ header .logo h1 {
 }
 .banner .roughDiv-bannerImgDarkening {
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(25, 25, 25, 0.6);
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (-webkit-min-device-pixel-ratio: 1.125), only screen and (min-resolution: 108dpi) {
@@ -525,11 +530,42 @@ header .logo h1 {
 }
 
 .banner {
-  position: relative;
   color: #fff;
 }
 .banner .roughDiv-bannerImgDarkening {
   padding-top: 110px;
+}
+.banner .banner_content {
+  /*position: relative;
+  .roughForPosition {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }*/
+}
+.banner .banner_content .heading1, .banner .banner_content .heading2 {
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 1.3em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.banner .banner_content .heading2 {
+  line-height: 1.8;
+}
+.banner .banner_content .buttons {
+  margin-top: 2em;
+  text-align: center;
+}
+.banner .banner_content .buttons a {
+  margin-right: 20px;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  line-height: 32px;
+  padding: 15px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 .banner .banner_content-image figure {
   position: relative;
@@ -548,7 +584,7 @@ header .logo h1 {
   float: right;
 }
 .banner ul.social {
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
 }
 .banner ul.social li {
