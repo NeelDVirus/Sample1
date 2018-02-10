@@ -530,19 +530,22 @@ header .logo h1 {
 }
 
 .banner {
+  position: relative;
   color: #fff;
 }
 .banner .roughDiv-bannerImgDarkening {
   padding-top: 110px;
 }
+.banner .row.main-board {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 .banner .banner_content {
-  /*position: relative;
-  .roughForPosition {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-  }*/
+  height: 100%;
 }
 .banner .banner_content .heading1, .banner .banner_content .heading2 {
   font-weight: 400;

@@ -64,22 +64,31 @@ header {
 
 
 .banner {
-    //position: relative;
+    position: relative;
     color: #fff;    
     
     .roughDiv-bannerImgDarkening {        
         padding-top: 110px;
     }
 
-    //--------------- .row.main-board --------------------------    
+    //--------------- .row.main-board --------------------------  
+    .row.main-board {
+        display: flex;
+        -webkit-align-items: center;
+                align-items: center;
+    }  
     .banner_content {
-        /*position: relative;
-        .roughForPosition {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }*/
+        height: 100%;
+        .roughForPosition1{
+            //position: relative; 
+            //height: 100%;
+        }
+        //.roughForPosition2 {
+            //position: absolute;
+            //top: 50%;
+            //left: 50%;
+            //transform: translate(-50%, 0);
+        //
         .heading1, .heading2 {            
             font-weight: $regular-openSans;
             color: #fff;
