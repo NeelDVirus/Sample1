@@ -1,7 +1,3 @@
-body {
-  background:#0b1d2a;
-}
-
 .arrows {
     width: 60px;
     height: 72px;
@@ -12,7 +8,9 @@ body {
 }
 
 .arrows path {
-    stroke: #2994D1;
+    //stroke: #2994D1; 
+    stroke: #00a4ff;
+    stroke: #8cd6ff;
     fill: transparent;
     stroke-width: 1px;  
     animation: arrow 2s infinite;
