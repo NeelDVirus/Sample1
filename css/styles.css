@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -593,52 +594,88 @@ header .logo h1 {
 .banner ul.social li {
   width: 25%;
   float: left;
-}
-.banner ul.social li a {
-  display: block;
-  background-image: url(../images/social-icon/socialSprites.png);
-  height: 45px;
-  width: 45px;
-  margin: 0 auto;
-}
-.banner ul.social .twitter a {
-  background-position: -90px -45px;
-}
-.banner ul.social .facebook a {
-  background-position: -45px -45px;
-}
-.banner ul.social .linkedin a {
-  background-position: 0 -45px;
-}
-.banner ul.social .youtube a {
-  background-position: -225px -45px;
-}
-.banner ul.social a {
-  -webkit-transition: background-position 0.15s ease-out;
-  transition: background-position 0.15s ease-out;
-}
-.banner ul.social .twitter a:hover {
-  background-position: -90px 0;
-}
-.banner ul.social .facebook a:hover {
-  background-position: -45px 0px;
-}
-.banner ul.social .linkedin a:hover {
-  background-position: 0 0px;
-}
-.banner ul.social .youtube a:hover {
-  background-position: -225px 0px;
-}
-.banner .scrollIcon-container {
-  width: 100%;
-  position: absolute;
-  bottom: 2%;
   text-align: center;
 }
-.banner .scrollIcon-container span {
+.banner ul.social li a {
+  font-size: 2.5em;
+  color: #fff;
+}
+.banner ul.social li a span {
   display: inline-block;
-  padding: 5px;
-  border: 2px solid #fff;
+  border-radius: 50px;
+}
+.banner ul.social li a:hover {
+  color: #baa256;
+}
+.banner .scrollIcon-container {
+  bottom: 2%;
+}
+
+body {
+  background: #0b1d2a;
+}
+
+.arrows {
+  width: 60px;
+  height: 72px;
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  bottom: 20px;
+}
+
+.arrows path {
+  stroke: #2994D1;
+  fill: transparent;
+  stroke-width: 1px;
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes arrow /*Safari and Chrome*/ {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.arrows path.a1 {
+  animation-delay: -1s;
+  -webkit-animation-delay: -1s;
+  /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+  animation-delay: -0.5s;
+  -webkit-animation-delay: -0.5s;
+  /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+  /* Safari 和 Chrome */
 }
 
 /* -----------------------------------------------------
@@ -700,5 +737,4 @@ header .logo h1 {
   }
 }
 /* ------ end of media query ------ */
-
 /*# sourceMappingURL=styles.css.map */

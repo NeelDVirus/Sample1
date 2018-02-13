@@ -139,43 +139,29 @@ header {
         li {
             width: 25%;
             float:left;
-            
-            a {
-                display: block;
-                background-image: url(../images/social-icon/socialSprites.png);
-                height: 45px;
-                width: 45px;
-                margin: 0 auto;
-            }// a
+            text-align: center;
         }
-    }
-    ul.social {
-        .twitter a {background-position: -90px -45px;}
-        .facebook a {background-position: -45px -45px;}
-        .linkedin a {background-position: 0 -45px;}
-        .youtube a {background-position: -225px -45px;}
-
-        a {transition: background-position 0.15s ease-out;}
-
-        .twitter a:hover {background-position: -90px 0;}
-        .facebook a:hover {background-position: -45px 0px;}
-        .linkedin a:hover {background-position: 0 0px;}
-        .youtube a:hover {background-position: -225px 0px;}
-    }
-    
-    .scrollIcon-container {
-        width: 100%;
-        position: absolute;
-        bottom: 2%;
-        text-align: center;
-        span {
+        li a {
+            font-size: 2.5em;
+            color: #fff;
+        }
+        li a span {
             display: inline-block;
-            padding: 5px;
-            border: 2px solid #fff;
+            -webkit-border-radius: 50px;
+                    border-radius: 50px;
         }
+        li a:hover {
+            color: $secondaryColor;
+        }
+    }
+
+    .scrollIcon-container {
+        bottom: 2%;
     }
     
 }// .banner
+
+@import "icons/scrollDown-1/scrollDown-1";
 
 
 
