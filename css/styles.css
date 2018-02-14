@@ -586,13 +586,13 @@ header .logo h1 {
 }
 .banner .row.social-icons .col {
   float: right;
+  text-align: center;
 }
 .banner ul.social {
-  width: 60%;
-  margin: 0 auto;
+  display: inline-block;
 }
 .banner ul.social li {
-  width: 25%;
+  padding: 0 16px;
   float: left;
   text-align: center;
 }
