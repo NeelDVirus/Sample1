@@ -57,7 +57,7 @@ table {
 ---------    Priority: Ultra    -----------
 -----------------------------------------------------*/
 html {
-  font-size: 62.5%;
+  font-size: 10px;
   height: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -546,97 +546,9 @@ header .logo h1 {
 }
 
 .banner .banner-flexItem {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  width: 100%;
 }
 
-/*
-.banner {
-    //--------------- .row.main-board --------------------------  
-    .row.main-board {
-        display: flex;
-        -webkit-align-items: center;
-                align-items: center;
-    }  
-    .banner_content {
-        height: 100%;
-        
-        .heading1, .heading2 {            
-            font-weight: $regular-openSans;
-            color: #fff;
-            letter-spacing: 2px;
-            font-size: 1.3em;
-            text-align: center;            
-            text-transform: uppercase;
-        }
-        .heading2 {
-            line-height: 1.8;
-        }
-        .buttons {
-            margin-top: 2em;
-            text-align: center;
-        }
-        .buttons a {
-            margin-right: 20px;            
-            font-size: 0.9em;
-            text-transform: uppercase;
-            line-height: 32px;
-            padding: 15px 30px;
-            border: 1px solid rgba(255,255,255,0.15)
-        }
-    }
-
-    .banner_content-image figure {
-        position: relative;
-        height: 400px;
-        //background-color: rgba(255,255,255,0.2);
-        img {
-            height: 100%;
-            width: 95%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-        }
-    }
-    
-    //------------------ .row.social-icons ------------------
-    .row.social-icons .col {
-        float: right;
-        text-align: center;
-    }
-    ul.social {
-        display: inline-block;
-        //width: 60%;
-        //margin: 0 auto;
-                
-        li {
-            //width: 25%;
-            padding: 0 16px;
-            float:left;
-            text-align: center;
-        }
-        li a {
-            font-size: 2.5em;
-            color: #fff;
-        }
-        li a span {
-            display: inline-block;
-            -webkit-border-radius: 50px;
-                    border-radius: 50px;
-        }
-        li a:hover {
-            color: $secondaryColor;
-        }
-    }
-
-    .scrollIcon-container {
-        //bottom: 2%;
-    }
-    
-}// .banner
-*/
 .banner .row.main-board {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -678,11 +590,6 @@ header .logo h1 {
 .banner .row.main-board .banner_content-image figure img {
   height: 100%;
   width: 95%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
 .banner .social-icons .col {
@@ -771,6 +678,10 @@ header .logo h1 {
   animation-delay: 0s;
   -webkit-animation-delay: 0s;
   /* Safari 和 Chrome */
+}
+
+body > * {
+  max-width: 100%;
 }
 
 /* -----------------------------------------------------
